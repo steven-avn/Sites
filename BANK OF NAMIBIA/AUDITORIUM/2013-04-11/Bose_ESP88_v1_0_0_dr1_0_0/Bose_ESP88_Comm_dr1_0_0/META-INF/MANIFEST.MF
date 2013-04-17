@@ -1,0 +1,53 @@
+Manifest-Version: 1.0.0
+Import-Package: org.osgi.service.http; specification-version=1.1,org.o
+ sgi.service.device; specification-version=1.0.1,com.amx.duet.driver; 
+ specification-version=1.0.1,com.amx.duet.core.osgi; specification-ver
+ sion=1.0.1,com.amx.duet.da; specification-version=1.0.1,com.amx.duet.
+ util.metadata; specification-version=1.0.1,com.amx.duet.util; specifi
+ cation-version=1.0.1,com.amx.duet.devicesdk; specification-version=1.
+ 9.0,com.amx.duet.devicesdk.base; specification-version=1.9.0,com.amx.
+ duet.devicesdk.component; specification-version=1.9.0,com.amx.duet.de
+ vicesdk.type; specification-version=1.9.0
+blockNameSelector: String,#Selector2,
+Device-Model: ESP88
+Poll_Time: Integer,10000,0-300000
+blockNameStMixer: String,#StdMixer,
+Bundle-Version: 1.0.0
+Bundle-Copyright: (C) Copyright AMX Corp. 2004-2008. All Rights Reserv
+ ed.
+Bundle-Name: Bose_ESP88_Comm_dr1_0_0
+Device-SDKClass: com.amx.duet.devicesdk.AudioMixer
+AMX-Type: Duet
+Device-Category: serial,rs-232
+Num-Inputs: blank
+blockNameGain: String,#Gain1,
+Duet-Firmware-Version: v3.30.371
+Bundle-Activator: com.amx.duet.impl.bose.esp88.dr1_0_0.Activator
+blockNameMixer: String,#Mixer,
+Num-Outputs: blank
+Device-Make: Bose
+Device-Revision: 1.0.0
+Device-SDKInterface: com.amx.duet.devicesdk.IAudioMixer2
+Export-Package: com.amx.duet.impl.bose.esp88.dr1_0_0; specification-ve
+ rsion=1.0.0,com.amx.duet.tools.bose.esp88.comm.component.dr1_0_0; spe
+ cification-version=1.0.0,com.amx.duet.tools.bose.esp88.comm.dr1_0_0; 
+ specification-version=1.0.0,com.amx.duet.tools.bose.esp88.io.dr1_0_0;
+  specification-version=1.0.0,com.amx.duet.tools.bose.esp88.json.dr1_0
+ _0; specification-version=1.0.0,com.amx.duet.tools.bose.esp88.lang.dr
+ 1_0_0; specification-version=1.0.0,com.amx.duet.tools.bose.esp88.math
+ .dr1_0_0; specification-version=1.0.0,com.amx.duet.tools.bose.esp88.n
+ et.http.dr1_0_0; specification-version=1.0.0,com.amx.duet.tools.bose.
+ esp88.net.tcp.dr1_0_0; specification-version=1.0.0,com.amx.duet.tools
+ .bose.esp88.regexp.dr1_0_0; specification-version=1.0.0,com.amx.duet.
+ tools.bose.esp88.text.dr1_0_0; specification-version=1.0.0,com.amx.du
+ et.tools.bose.esp88.util.dr1_0_0; specification-version=1.0.0
+Device-Levels: 210
+Router-Service: com.amx.duet.routers.snapi.ISNAPIRouter
+File-Dependencies: devicesdkrt.jar; specification-version=1.9.0,snapir
+ outer.jar; specification-version=1.9.0
+Device-Class: com.amx.duet.impl.bose.esp88.dr1_0_0.BoseEsp88
+Bundle-Vendor: AMX Corporation
+blockNameToneEQ: String,#ToneEQ,
+Device-Channels: 310
+Device-Interface: com.amx.duet.impl.bose.esp88.dr1_0_0.IBoseEsp88
+

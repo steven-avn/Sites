@@ -1,0 +1,149 @@
+<DCS:LibraryDataSet xmlns:DCS="AMX">
+  <dtManufacturer xmlns="AMX">
+    <ID>1</ID>
+    <Name>Kramer</Name>
+    <dtDeviceType>
+      <ID>1</ID>
+      <fkManufacturerID>1</fkManufacturerID>
+      <Name>VGA Matrix Switcher</Name>
+      <dtDeviceModel>
+        <ID>1</ID>
+        <fkDeviceTypeID>1</fkDeviceTypeID>
+        <Name>VP 4x4</Name>
+        <CreatedByAMX>false</CreatedByAMX>
+        <LegacyID />
+        <dtRS232>
+          <ID>1</ID>
+          <fkDeviceModelID>1</fkDeviceModelID>
+          <RS232BaudRate>9600</RS232BaudRate>
+          <RS232Parity>None</RS232Parity>
+          <RS232DataBits>8</RS232DataBits>
+          <RS232StopBits>1</RS232StopBits>
+          <RS232FlowControl>None</RS232FlowControl>
+          <RS232DataFormat>HEX</RS232DataFormat>
+          <dtRS232CommandData>
+            <ID>1</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>IN 1 TO OUT 1</Name>
+            <Data>01 81 81 81</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>2</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>IN 2 TO OUT 1</Name>
+            <Data>01 82 81 81</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>3</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>IN 3 TO OUT 1</Name>
+            <Data>01 83 81 81</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>4</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>IN 4 TO OUT 1</Name>
+            <Data>01 84 81 81</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>5</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>IN 1 TO OUT 2</Name>
+            <Data>01 81 82 81</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>6</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>IN 2 TO OUT 2</Name>
+            <Data>01 82 82 81</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>7</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>IN 3 TO OUT 2</Name>
+            <Data>01 83 82 81</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>8</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>IN 4 TO OUT 2</Name>
+            <Data>01 84 82 81</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>9</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>IN 1 TO OUT 3</Name>
+            <Data>01 81 83 81</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>10</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>IN 2 TO OUT 3</Name>
+            <Data>01 82 83 81</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>11</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>IN 1 TO OUT 4</Name>
+            <Data>01 81 84 81</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>12</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>IN 2 TO OUT 4</Name>
+            <Data>01 82 84 81</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>13</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>IN 3 TO OUT 3</Name>
+            <Data>01 83 83 81</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>14</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>IN 3 TO OUT 4</Name>
+            <Data>01 83 84 81</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>15</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>IN 4 TO OUT 3</Name>
+            <Data>01 84 83 81</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>16</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>IN 4 TO OUT 4</Name>
+            <Data>01 84 84 81</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>17</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>Input HDMI</Name>
+            <Data />
+          </dtRS232CommandData>
+          <dtRS232StatusData>
+            <ID>1</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>Input Status HDMI</Name>
+            <Data />
+          </dtRS232StatusData>
+        </dtRS232>
+        <dtIR>
+          <ID>1</ID>
+          <fkDeviceModelID>1</fkDeviceModelID>
+          <IRDataFormat>HEX</IRDataFormat>
+          <IRFrequency>NA</IRFrequency>
+          <IRPulsesBit>NA</IRPulsesBit>
+          <IRCarrier>NA</IRCarrier>
+        </dtIR>
+        <dtIP>
+          <ID>1</ID>
+          <fkDeviceModelID>1</fkDeviceModelID>
+          <IPDataFormat>HEX</IPDataFormat>
+        </dtIP>
+      </dtDeviceModel>
+    </dtDeviceType>
+  </dtManufacturer>
+</DCS:LibraryDataSet>

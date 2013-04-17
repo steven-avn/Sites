@@ -1,0 +1,1348 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE module [<!ENTITY components SYSTEM "components.xml">]>
+<dev:module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dev="http://www.amx.com/duet/devicesdk"  xsi:schemaLocation="http://www.amx.com/duet/devicesdk/module.xsd">
+	<dev:header>
+		<dev:manifest-version>1.0.0</dev:manifest-version>
+		<dev:amx-type>Duet</dev:amx-type>
+		<dev:bundle-name>Sony_PCS_XG80_Comm_dr1_0_0</dev:bundle-name>
+		<dev:device-make>Sony</dev:device-make>
+		<dev:duet-firmware-version>v3.50.430</dev:duet-firmware-version>
+		<dev:device-channels>314</dev:device-channels>
+		<dev:device-levels>8</dev:device-levels>
+		<dev:device-models>
+			<dev:device-model>PCS-XG80</dev:device-model>
+		</dev:device-models>
+		<dev:device-category>ip,serial,rs-232</dev:device-category>
+		<dev:device-sdkclass>com.amx.duet.devicesdk.VideoConferencer</dev:device-sdkclass>
+		<dev:device-sdkinterface>com.amx.duet.devicesdk.IVideoConferencer3</dev:device-sdkinterface>
+		<dev:device-class>com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80</dev:device-class>
+		<dev:device-revision>1.0.0</dev:device-revision>
+		<dev:router-service>com.amx.duet.routers.snapi.ISNAPIRouter</dev:router-service>
+		<dev:bundle-activator>com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Activator</dev:bundle-activator>
+		<dev:bundle-version>1.0.3</dev:bundle-version>
+		<dev:bundle-vendor>AMX Corporation</dev:bundle-vendor>
+		<dev:bundle-copyright>(C) Copyright AMX Corp. 2004-2010. All Rights Reserved.</dev:bundle-copyright>
+		<dev:import-packages>
+			<dev:import-package version="1.1">org.osgi.service.http</dev:import-package>
+			<dev:import-package version="1.0.1">org.osgi.service.device</dev:import-package>
+			<dev:import-package version="1.0.1">com.amx.duet.driver</dev:import-package>
+			<dev:import-package version="1.0.1">com.amx.duet.core.osgi</dev:import-package>
+			<dev:import-package version="1.0.2">com.amx.duet.da</dev:import-package>
+			<dev:import-package version="1.0.1">com.amx.duet.util.metadata</dev:import-package>
+			<dev:import-package version="1.0.1">com.amx.duet.util</dev:import-package>
+			<dev:import-package version="1.15.0">com.amx.duet.devicesdk</dev:import-package>
+			<dev:import-package version="1.15.0">com.amx.duet.devicesdk.base</dev:import-package>
+			<dev:import-package version="1.15.0">com.amx.duet.devicesdk.component</dev:import-package>
+			<dev:import-package version="1.15.0">com.amx.duet.devicesdk.type</dev:import-package>
+		</dev:import-packages>
+		<dev:export-packages>
+			<dev:export-package version="1.0.3">com.amx.duet.impl.sony.pcs_xg80.dr1_0_0</dev:export-package>
+		</dev:export-packages>
+		<dev:file-dependencies>
+			<dev:file-dependency version="1.15.0">devicesdkrt.jar</dev:file-dependency>
+			<dev:file-dependency version="1.15.0">snapirouter.jar</dev:file-dependency>
+		</dev:file-dependencies>
+		<dev:device-interface>com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.ISony_PCS_XG80</dev:device-interface>
+		<dev:device-guid>SONYPCS-XG80 02.00.00</dev:device-guid>
+		<dev:user-defined-entries>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>IP-Dialing-Capable</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>false</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>Phoneline-Dialing-Capable</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>false</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>Num-Speed-Dial-Indexes</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>0</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>Farend-Camera-Control-Available</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>false</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>Farend-Source-Select-Available</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>false</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>Support-Multipoint</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>false</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Audible-Ring-Cycle</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Audible-Ring</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Auto-Answer</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Auto-Answer-Cycle</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Auto-Focus</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Auto-Focus-Cycle</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Auto-Iris</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>false</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Auto-Iris-Cycle</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>false</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Camera-Preset-Cycle</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Camera-Preset</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Dialer</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Focus</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>false</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Focus-Ramp</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Focus-Speed</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>false</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Hook</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Hook-Cycle</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Input-Select-Cycle</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Input-Select</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Iris</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>false</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Iris-Ramp</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>false</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Iris-Speed</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>false</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Menu</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Menu-10Key</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Menu-Navigate</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Pan-Ramp</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Pan-Tilt</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>false</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Pan-Tilt-Speed</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>false</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Phonebook</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-PIP</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-PIP-Cycle</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-PIP-Position-Cycle</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Power</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Power-Cycle</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Privacy</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Privacy-Cycle</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Tilt-Ramp</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Volume</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Volume-Mute-Cycle</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Volume-Ramp</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Zoom</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>false</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Zoom-Ramp</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>true</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Has-Zoom-Speed</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>false</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Menu-List</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>ASTERISK,POUND,DIAL,ACCEPT,REJECT,MENU,DISPLAY,CANCEL,DOT,RETURN,ENTER</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Menu-Navigate-List</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>UP,DOWN,LEFT,RIGHT,SELECT</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+			<dev:user-defined-entry>
+				<dev:user-defined-entry-name>PROPERTY-Dialer-Count</dev:user-defined-entry-name>
+				<dev:user-defined-entry-value>1</dev:user-defined-entry-value>
+			</dev:user-defined-entry>
+		</dev:user-defined-entries>
+		<dev:module-init-entries>
+			<dev:module-init-entry>
+				<dev:module-init-entry-name>Login</dev:module-init-entry-name>
+				<dev:module-init-entry-datatype>String</dev:module-init-entry-datatype>
+				<dev:module-init-entry-value>sonypcs</dev:module-init-entry-value>
+				<dev:module-init-entry-range></dev:module-init-entry-range>
+			</dev:module-init-entry>
+			<dev:module-init-entry>
+				<dev:module-init-entry-name>Baud_Rate</dev:module-init-entry-name>
+				<dev:module-init-entry-datatype>Integer</dev:module-init-entry-datatype>
+				<dev:module-init-entry-value>38400</dev:module-init-entry-value>
+				<dev:module-init-entry-range></dev:module-init-entry-range>
+			</dev:module-init-entry>
+			<dev:module-init-entry>
+				<dev:module-init-entry-name>Password</dev:module-init-entry-name>
+				<dev:module-init-entry-datatype>String</dev:module-init-entry-datatype>
+				<dev:module-init-entry-value></dev:module-init-entry-value>
+				<dev:module-init-entry-range></dev:module-init-entry-range>
+			</dev:module-init-entry>
+			<dev:module-init-entry>
+				<dev:module-init-entry-name>Multipoint</dev:module-init-entry-name>
+				<dev:module-init-entry-datatype>Integer</dev:module-init-entry-datatype>
+				<dev:module-init-entry-value>1</dev:module-init-entry-value>
+				<dev:module-init-entry-range></dev:module-init-entry-range>
+			</dev:module-init-entry>
+			<dev:module-init-entry>
+				<dev:module-init-entry-name>Phonebook_Entries</dev:module-init-entry-name>
+				<dev:module-init-entry-datatype>Integer</dev:module-init-entry-datatype>
+				<dev:module-init-entry-value>50</dev:module-init-entry-value>
+				<dev:module-init-entry-range>1..1000</dev:module-init-entry-range>
+			</dev:module-init-entry>
+		</dev:module-init-entries>
+	</dev:header>
+	<dev:type-info>
+	<dev:class superclass="com.amx.duet.devicesdk.VideoConferencer" serializable="true" name="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80">
+		<dev:extends>
+			<dev:extend name="com.amx.duet.util.TimelineListener"></dev:extend>
+			<dev:extend name="com.amx.duet.util.TimerListener"></dev:extend>
+			<dev:extend name="com.amx.duet.core.master.netlinx.IDataListener"></dev:extend>
+			<dev:extend name="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.ISocketConnectionListener"></dev:extend>
+			<dev:extend name="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.ISony_PCS_XG80"></dev:extend>
+		</dev:extends>
+		<dev:fields>
+			<dev:field visibility="public" fulltype="java.util.List" type="List" final="true" name="SourceSelectValues" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="java.lang.String[]" type="String" final="true" name="DISPLAY" static="true"></dev:field>
+		</dev:fields>
+		<dev:methods>
+			<dev:constructor visibility="public" name="Sony_PCS_XG80"></dev:constructor>
+			<dev:constructor visibility="public" name="Sony_PCS_XG80">
+				<dev:params>
+					<dev:param type="org.osgi.framework.BundleContext" comment="" name="bctxt"></dev:param>
+					<dev:param type="com.amx.duet.da.NetLinxDevice" comment="" name="nd"></dev:param>
+					<dev:param type="java.util.Properties" comment="" name="props"></dev:param>
+				</dev:params>
+			</dev:constructor>
+			<dev:method visibility="public" type="void" name="dispose"></dev:method>
+			<dev:method visibility="public" returncomment="String[] String[]" type="java.lang.String[]" name="getInputProperties"></dev:method>
+			<dev:method visibility="public" returncomment="String String" type="java.lang.String" name="getInputProperty">
+				<dev:params>
+					<dev:param type="int" comment="[1..7]" name="index"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="[7]" type="int" name="getInputCount"></dev:method>
+			<dev:method visibility="public" returncomment="[1..7]" type="int" name="getInputSelect"></dev:method>
+			<dev:method visibility="public" type="void" name="setInputSelect">
+				<dev:params>
+					<dev:param type="int" comment="[1..7]" name="index"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="boolean" type="boolean" name="isDeviceOnLine"></dev:method>
+			<dev:method visibility="public" returncomment="boolean" type="boolean" name="isDataInitialized"></dev:method>
+			<dev:method visibility="public" type="void" name="refresh"></dev:method>
+			<dev:method visibility="public" type="void" name="setProperty">
+				<dev:params>
+					<dev:param type="java.lang.String" comment="[&quot;Baud_Rate&quot;,&quot;IP_Address&quot;,&quot;Login&quot;,&quot;Password&quot;] - case sensitive" name="key"></dev:param>
+					<dev:param type="java.lang.String" comment="&lt;p&gt;   Note: default baud rate at reboot is 38400 (if applicable)." name="value"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="value" type="java.lang.String" name="getProperty">
+				<dev:params>
+					<dev:param type="java.lang.String" comment="[&quot;Baud_Rate&quot;,&quot;IP_Address&quot;,&quot;Login&quot;,&quot;Password&quot;]" name="key"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="reinitialize"></dev:method>
+			<dev:method visibility="public" type="void" name="closeSearchDB">
+				<dev:params>
+					<dev:param type="java.lang.String" comment="" name="searchHandle"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="cycleAutoFocus"></dev:method>
+			<dev:method visibility="public" type="void" name="cycleCameraPreset"></dev:method>
+			<dev:method visibility="public" type="void" name="cyclePIPPosition"></dev:method>
+			<dev:method visibility="public" type="void" name="cyclePower"></dev:method>
+			<dev:method visibility="public" type="void" name="cyclePrivacy"></dev:method>
+			<dev:method visibility="public" type="void" name="deleteRecord">
+				<dev:params>
+					<dev:param type="com.amx.duet.devicesdk.type.PhonebookRecord" comment="" name="sdr"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="deleteRecord">
+				<dev:params>
+					<dev:param type="java.lang.String" comment="" name="recordID"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="dial">
+				<dev:params>
+					<dev:param type="int" name="index"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="dial">
+				<dev:params>
+					<dev:param type="com.amx.duet.devicesdk.type.PhonebookRecord" comment="" name="pbe"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="dial">
+				<dev:params>
+					<dev:param type="java.lang.String" comment="" name="recordID"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="dialNumber">
+				<dev:params>
+					<dev:param type="java.lang.String" comment="" name="number"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="dialDTMF">
+				<dev:params>
+					<dev:param type="char" comment="[0..9,#,*]" name="cValue"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="ICameraComponent (the camera to control)" type="com.amx.duet.devicesdk.component.ICameraComponent" name="getCameraComponent">
+				<dev:params>
+					<dev:param type="int" comment="[1,2]" name="index"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="[1..100]" type="int" name="getCameraPreset"></dev:method>
+			<dev:method visibility="public" returncomment="[100]" type="int" name="getCameraPresetCount"></dev:method>
+			<dev:method visibility="public" type="com.amx.duet.devicesdk.component.IDialerComponent" name="getDialerComponent">
+				<dev:params>
+					<dev:param type="int" name="index"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="int int" type="int" name="getDialerComponentCount"></dev:method>
+			<dev:method visibility="public" type="com.amx.duet.devicesdk.component.ICameraComponent" name="getFarEndCameraComponent">
+				<dev:params>
+					<dev:param type="int" comment="[1]" name="index"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="int" name="getFarEndCameraComponentCount"></dev:method>
+			<dev:method visibility="public" type="com.amx.duet.devicesdk.type.FocusRamp" name="getFocusRamp"></dev:method>
+			<dev:method visibility="public" type="java.lang.String" name="getLastNumberDialed"></dev:method>
+			<dev:method visibility="public" type="com.amx.duet.devicesdk.component.ICameraComponent" name="getNearEndCameraComponent">
+				<dev:params>
+					<dev:param type="int" comment="[1]" name="index"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="int" name="getNearEndCameraComponentCount"></dev:method>
+			<dev:method visibility="public" type="com.amx.duet.devicesdk.type.PanRamp" name="getPanRamp"></dev:method>
+			<dev:method visibility="public" returncomment="ISourceSelectComponent to control." type="com.amx.duet.devicesdk.component.ISourceSelectComponent" name="getSourceSelectComponent">
+				<dev:params>
+					<dev:param type="int" comment="[1,2]" name="index"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="com.amx.duet.devicesdk.component.IPhonebookComponent" name="getPhonebookComponent">
+				<dev:params>
+					<dev:param type="int" name="index"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="int" name="getPhonebookComponentCount"></dev:method>
+			<dev:method visibility="public" type="int" name="getSourceSelectComponentCount"></dev:method>
+			<dev:method visibility="public" type="java.lang.String" name="getSourceSelectDisplayText">
+				<dev:params>
+					<dev:param type="com.amx.duet.devicesdk.type.InputSourceSelect" comment="p=com.amx.duet.devicesdk.type.NamedInput [CAMERA,AUXILIARY] p=com.amx.duet.devicesdk.type.SignalType [RGB,SVIDEO]" name="sourceSelect"></dev:param>
+					<dev:param type="int" comment="[1,2]" name="inputNumber"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="java.lang.String[]" name="getSourceSelectDisplayText">
+				<dev:params>
+					<dev:param type="com.amx.duet.devicesdk.type.InputSourceSelect" comment="p=com.amx.duet.devicesdk.type.NamedInput [CAMERA,AUXILIARY] p=com.amx.duet.devicesdk.type.SignalType [RGB,SVIDEO]" name="sourceSelect"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="java.lang.String" name="getSourceSelectDisplayText">
+				<dev:params>
+					<dev:param type="com.amx.duet.devicesdk.type.InputSourceSelectInfo" comment="" name="sourceSelectInfo"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="java.util.List" name="getSourceSelectValues"></dev:method>
+			<dev:method visibility="public" returncomment="[1000]" type="int" name="getPhonebookCapacity"></dev:method>
+			<dev:method visibility="public" type="com.amx.duet.devicesdk.type.TiltRamp" name="getTiltRamp"></dev:method>
+			<dev:method visibility="public" returncomment="int [0..255,-2147483648]" type="int" name="getVolume"></dev:method>
+			<dev:method visibility="public" type="com.amx.duet.devicesdk.type.ZoomRamp" name="getZoomRamp"></dev:method>
+			<dev:method visibility="public" type="boolean" name="isAutoFocusOn"></dev:method>
+			<dev:method visibility="public" type="void" name="moveMenuCursor">
+				<dev:params>
+					<dev:param type="com.amx.duet.devicesdk.type.Navigation" comment="[DOWN,UP,LEFT,RIGHT]" name="direction"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="pressMenuButton">
+				<dev:params>
+					<dev:param type="com.amx.duet.devicesdk.type.Button" comment="[ENTER,RETURN,DOT,DIGIT_0,DIGIT_1,DIGIT_2,DIGIT_3,DIGIT_4,DIGIT_5,DIGIT_6,DIGIT_7,DIGIT_8,DIGIT_9,CANCEL]    p=com.amx.duet.devicesdk.type.DialerButton [ASTERISK,POUND,DIAL,ACCEPT,REJECT]   p=com.amx.duet.devicesdk.type.ExtendedButton [MENU,DISPLAY]    p=com.amx.duet.impl.sony.pcs_g70.dr1_0_0.Sony_PCS_HG90_RemoteButton [MIC,VOLUME_UP,VOLUME_DOWN,STOP,POWER,ZOOM_WIDE,ZOOM_TELE,CONNECT,DISCONNECT,VIDEO_INPUT,PHONEBOOK,MENU_LONG,HELP_LONG]   &lt;p&gt;" name="button"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="boolean" name="queryDB">
+				<dev:params>
+					<dev:param type="com.amx.duet.devicesdk.type.PhonebookSearchSet" comment="" name="si"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="redial"></dev:method>
+			<dev:method visibility="public" type="java.lang.String" name="searchDB">
+				<dev:params>
+					<dev:param type="com.amx.duet.devicesdk.type.PhonebookSearchRequest" comment="" name="sr"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="selectMenuItem"></dev:method>
+			<dev:method visibility="public" type="void" name="setAutoAnswerOn">
+				<dev:params>
+					<dev:param type="boolean" comment="" name="state"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="setAudibleRingOn">
+				<dev:params>
+					<dev:param type="boolean" comment="" name="state"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="setAutoFocusOn">
+				<dev:params>
+					<dev:param type="boolean" comment="" name="state"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="setCameraPreset">
+				<dev:params>
+					<dev:param type="int" comment="[1..100]" name="preset"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="saveCameraPreset">
+				<dev:params>
+					<dev:param type="int" comment="[1..100]" name="preset"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="setFocusRamp">
+				<dev:params>
+					<dev:param type="com.amx.duet.devicesdk.type.FocusRamp" comment="[NEAR,FAR,STOP]" name="rf"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="setInputSource">
+				<dev:params>
+					<dev:param type="com.amx.duet.devicesdk.type.InputSourceSelect" comment="[]p=com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.SonyPCSXG80SignalType[CAMERA]  []p=com.amx.duet.devicesdk.type.SignalType[COMPONENT]  []p=com.amx.duet.devicesdk.type.SignalType[VGA]  []p=com.amx.duet.devicesdk.type.SignalType[SVIDEO]" name="sourceSelect"></dev:param>
+					<dev:param type="int" comment="[1..2]" name="inputNumber"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="setVolume">
+				<dev:params>
+					<dev:param type="int" comment="[0..255]" name="level"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="setOffHook">
+				<dev:params>
+					<dev:param type="boolean" comment="" name="state"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="setPanRamp">
+				<dev:params>
+					<dev:param type="com.amx.duet.devicesdk.type.PanRamp" comment="[LEFT, RIGHT, STOP]" name="rp"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="setPIPOn">
+				<dev:params>
+					<dev:param type="boolean" comment="" name="state"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="setPower">
+				<dev:params>
+					<dev:param type="com.amx.duet.devicesdk.type.PowerState" comment="[ON,OFF]" name="ps"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="setPrivacyOn">
+				<dev:params>
+					<dev:param type="boolean" comment="" name="state"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="setTiltRamp">
+				<dev:params>
+					<dev:param type="com.amx.duet.devicesdk.type.TiltRamp" comment="[UP,DOWN,STOP]" name="rt"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="setVolumeRamp">
+				<dev:params>
+					<dev:param type="com.amx.duet.devicesdk.type.LevelRamp" comment="[UP,DOWN,STOP]" name="rl"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="com.amx.duet.devicesdk.type.LevelRamp" name="getVolumeRamp"></dev:method>
+			<dev:method visibility="public" type="void" name="setZoomRamp">
+				<dev:params>
+					<dev:param type="com.amx.duet.devicesdk.type.ZoomRamp" comment="[IN,OUT,STOP]" name="rz"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="updateRecord">
+				<dev:params>
+					<dev:param type="com.amx.duet.devicesdk.type.PhonebookRecord" name="sdr"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="Date" type="java.util.Date" name="getDeviceDateTime"></dev:method>
+			<dev:method visibility="public" returncomment="String" type="java.lang.String" name="getFWVersion"></dev:method>
+			<dev:method visibility="public" type="void" name="passThru">
+				<dev:params>
+					<dev:param type="byte[]" name="buffer"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="setDeviceDateTime">
+				<dev:params>
+					<dev:param type="java.util.Date" comment="" name="date"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="java.lang.String[]" name="getLabels"></dev:method>
+			<dev:method visibility="public" returncomment="" type="java.lang.String" name="getLabel">
+				<dev:params>
+					<dev:param type="int" comment="[1..5]" name="input"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="cycleOffHook"></dev:method>
+			<dev:method visibility="public" returncomment="boolean" type="boolean" name="isOffHook"></dev:method>
+			<dev:method visibility="public" returncomment="DialerStatus" type="com.amx.duet.devicesdk.type.DialerStatus" name="getDialerStatus"></dev:method>
+			<dev:method visibility="public" returncomment="boolean" type="boolean" name="isAutoAnswerOn"></dev:method>
+			<dev:method visibility="public" type="void" name="cycleAutoAnswer"></dev:method>
+			<dev:method visibility="public" type="void" name="adjustVolume">
+				<dev:params>
+					<dev:param type="int" comment="[-255..255]" name="offset"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="cycleInputSelect"></dev:method>
+			<dev:method visibility="public" returncomment="boolean" type="boolean" name="isPIPOn"></dev:method>
+			<dev:method visibility="public" type="void" name="cyclePIP"></dev:method>
+			<dev:method visibility="public" returncomment="boolean" type="boolean" name="isPrivacyOn"></dev:method>
+			<dev:method visibility="public" type="void" name="cycleAudibleRing"></dev:method>
+			<dev:method visibility="public" returncomment="boolean" type="boolean" name="isAudibleRingOn"></dev:method>
+			<dev:method visibility="public" returncomment="int" type="com.amx.duet.devicesdk.type.PowerState" name="getPower"></dev:method>
+			<dev:method visibility="public" type="void" name="setVolumeMuteOn">
+				<dev:params>
+					<dev:param type="boolean" comment="boolean" name="state"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="boolean" type="boolean" name="isVolumeMuteOn"></dev:method>
+			<dev:method visibility="public" type="void" name="cycleInputSource"></dev:method>
+			<dev:method visibility="public" type="com.amx.duet.devicesdk.type.InputSourceSelectInfo" name="getInputSource"></dev:method>
+			<dev:method visibility="public" type="void" name="setInputSource">
+				<dev:params>
+					<dev:param type="com.amx.duet.devicesdk.type.InputSourceSelectInfo" name="arg0"></dev:param>
+				</dev:params>
+			</dev:method>
+		</dev:methods>
+	</dev:class>
+	<dev:class superclass="com.amx.duet.devicesdk.type.Button" name="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_RemoteButton">
+		<dev:fields>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_RemoteButton" type="Sony_PCS_XG80_RemoteButton" final="true" name="MIC" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_RemoteButton" type="Sony_PCS_XG80_RemoteButton" final="true" name="VOLUME_UP" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_RemoteButton" type="Sony_PCS_XG80_RemoteButton" final="true" name="VOLUME_DOWN" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_RemoteButton" type="Sony_PCS_XG80_RemoteButton" final="true" name="STOP" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_RemoteButton" type="Sony_PCS_XG80_RemoteButton" final="true" name="POWER" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_RemoteButton" type="Sony_PCS_XG80_RemoteButton" final="true" name="ZOOM_WIDE" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_RemoteButton" type="Sony_PCS_XG80_RemoteButton" final="true" name="ZOOM_TELE" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_RemoteButton" type="Sony_PCS_XG80_RemoteButton" final="true" name="CONNECT" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_RemoteButton" type="Sony_PCS_XG80_RemoteButton" final="true" name="DISCONNECT" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_RemoteButton" type="Sony_PCS_XG80_RemoteButton" final="true" name="VIDEO_INPUT" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_RemoteButton" type="Sony_PCS_XG80_RemoteButton" final="true" name="PHONEBOOK" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_RemoteButton" type="Sony_PCS_XG80_RemoteButton" final="true" name="MENU_LONG" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_RemoteButton" type="Sony_PCS_XG80_RemoteButton" final="true" name="HELP_LONG" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="java.util.List" type="List" final="true" name="VALUES" static="true"></dev:field>
+		</dev:fields>
+	</dev:class>
+	<dev:class superclass="com.amx.duet.devicesdk.component.DialerComponentImpl" name="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_DialerComponent">
+		<dev:fields></dev:fields>
+		<dev:methods>
+			<dev:constructor visibility="public" name="Sony_PCS_XG80_DialerComponent">
+				<dev:params>
+					<dev:param type="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80" name="caller"></dev:param>
+					<dev:param type="int" name="index"></dev:param>
+				</dev:params>
+			</dev:constructor>
+			<dev:method visibility="public" type="void" name="dial">
+				<dev:params>
+					<dev:param type="int" name="index"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="dial">
+				<dev:params>
+					<dev:param type="com.amx.duet.devicesdk.type.PhonebookRecord" name="sdr"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="dial">
+				<dev:params>
+					<dev:param type="java.lang.String" name="recordID"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="dialDTMF">
+				<dev:params>
+					<dev:param type="char" name="cValue"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="dialNumber">
+				<dev:params>
+					<dev:param type="java.lang.String" name="number"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="flashHook"></dev:method>
+			<dev:method visibility="public" type="void" name="redial"></dev:method>
+			<dev:method visibility="public" type="void" name="refresh"></dev:method>
+			<dev:method visibility="public" type="void" name="setAudibleRingOn">
+				<dev:params>
+					<dev:param type="boolean" name="state"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="setAutoAnswerOn">
+				<dev:params>
+					<dev:param type="boolean" name="state"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="cycleAudibleRing"></dev:method>
+			<dev:method visibility="public" type="void" name="cycleAutoAnswer"></dev:method>
+			<dev:method visibility="public" type="void" name="setOffHook">
+				<dev:params>
+					<dev:param type="boolean" name="state"></dev:param>
+				</dev:params>
+			</dev:method>
+		</dev:methods>
+	</dev:class>
+	<dev:class superclass="com.amx.duet.devicesdk.base.TypeSafeEnumBase" name="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_AdvancedEvents">
+		<dev:fields>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_AdvancedEvents" type="Sony_PCS_XG80_AdvancedEvents" final="true" name="MCU_DISCONNECT" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_AdvancedEvents" type="Sony_PCS_XG80_AdvancedEvents" final="true" name="DEFAULT_DIAL_CONFIG" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_AdvancedEvents" type="Sony_PCS_XG80_AdvancedEvents" final="true" name="PHONEBOOK_ENTRY_OPTIONS" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_AdvancedEvents" type="Sony_PCS_XG80_AdvancedEvents" final="true" name="CLOCK" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_AdvancedEvents" type="Sony_PCS_XG80_AdvancedEvents" final="true" name="INDEXING" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_AdvancedEvents" type="Sony_PCS_XG80_AdvancedEvents" final="true" name="LABEL" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="java.util.List" type="List" final="true" name="VALUES" static="true"></dev:field>
+		</dev:fields>
+	</dev:class>
+	<dev:class superclass="com.amx.duet.devicesdk.base.TypeSafeEnumBase" name="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_AdvancedDialOptions">
+		<dev:fields>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_AdvancedDialOptions" type="Sony_PCS_XG80_AdvancedDialOptions" final="true" name="LINEIF" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_AdvancedDialOptions" type="Sony_PCS_XG80_AdvancedDialOptions" final="true" name="LANBAND" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_AdvancedDialOptions" type="Sony_PCS_XG80_AdvancedDialOptions" final="true" name="VIDEO" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_AdvancedDialOptions" type="Sony_PCS_XG80_AdvancedDialOptions" final="true" name="FRAME" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_AdvancedDialOptions" type="Sony_PCS_XG80_AdvancedDialOptions" final="true" name="AUDIO" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_AdvancedDialOptions" type="Sony_PCS_XG80_AdvancedDialOptions" final="true" name="FECC" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80_AdvancedDialOptions" type="Sony_PCS_XG80_AdvancedDialOptions" final="true" name="SCREENSIZE" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="java.util.List" type="List" final="true" name="VALUES" static="true"></dev:field>
+		</dev:fields>
+	</dev:class>
+	<dev:class superclass="com.amx.duet.devicesdk.type.SignalType" name="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.SonyPCSXG80SignalType">
+		<dev:fields>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.SonyPCSXG80SignalType" type="SonyPCSXG80SignalType" final="true" name="CAMERA" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.SonyPCSXG80SignalType" type="SonyPCSXG80SignalType" final="true" name="LINE_SGNL" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="java.util.List" type="List" final="true" name="VALUES" static="true"></dev:field>
+		</dev:fields>
+	</dev:class>
+	<dev:class superclass="java.lang.Thread" name="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.SocketConnection">
+		<dev:fields>
+			<dev:field visibility="public" fulltype="int" type="int" final="true" constexpr="1" const="1" name="CONNECTED" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="int" type="int" final="true" constexpr="-1" const="-1" name="TIMEOUT" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="int" type="int" final="true" constexpr="-2" const="-2" name="CLOSED" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="int" type="int" final="true" constexpr="-3" const="-3" name="INVALID_HOST" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="int" type="int" final="true" constexpr="-4" const="-4" name="FAILED_CONNECT" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="int" type="int" final="true" constexpr="0" const="0" name="INFINITE" static="true"></dev:field>
+		</dev:fields>
+		<dev:methods>
+			<dev:constructor visibility="public" name="SocketConnection">
+				<dev:params>
+					<dev:param type="java.net.InetAddress" comment="InetAddress object indicating the host to connect to" name="addr"></dev:param>
+					<dev:param type="int" comment="integer port number to connect to" name="port"></dev:param>
+					<dev:param type="int" comment="integer size of maximum receive buffer" name="bufferSize"></dev:param>
+					<dev:param type="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.ISocketConnectionListener" comment="SocketReceiveHandler object that will be called when data is received on a      sockect or when an error occurs." name="listener"></dev:param>
+				</dev:params>
+			</dev:constructor>
+			<dev:constructor visibility="public" name="SocketConnection">
+				<dev:params>
+					<dev:param type="java.lang.String" comment="String name of host to connect to" name="host"></dev:param>
+					<dev:param type="int" comment="port number to connect to" name="port"></dev:param>
+					<dev:param type="int" comment="integer size of maximum receive buffer" name="bufferSize"></dev:param>
+					<dev:param type="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.ISocketConnectionListener" comment="SocketReceiveHandler object that will be called when data is received on a       sockect or when an error occurs." name="listener"></dev:param>
+				</dev:params>
+			</dev:constructor>
+			<dev:constructor visibility="public" name="SocketConnection">
+				<dev:params>
+					<dev:param type="java.net.InetAddress" comment="host String name of host to connect to" name="addr"></dev:param>
+					<dev:param type="int" comment="port number to connect to" name="port"></dev:param>
+					<dev:param type="int" comment="integer size of maximum receive buffer" name="bufferSize"></dev:param>
+					<dev:param type="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.ISocketConnectionListener" comment="SocketReceiveHandler object that will be called when data is received on a      sockect or when an error occurs." name="listener"></dev:param>
+					<dev:param type="int" comment="number of milliseconds to wait for received data" name="timeout"></dev:param>
+				</dev:params>
+			</dev:constructor>
+			<dev:constructor visibility="public" name="SocketConnection">
+				<dev:params>
+					<dev:param type="java.lang.String" comment="String name of host to connect to" name="host"></dev:param>
+					<dev:param type="int" comment="port number to connect to" name="port"></dev:param>
+					<dev:param type="int" comment="integer size of maximum receive buffer" name="bufferSize"></dev:param>
+					<dev:param type="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.ISocketConnectionListener" comment="SocketReceiveHandler object that will be called when data is received on a       sockect or when an error occurs." name="listener"></dev:param>
+					<dev:param type="int" name="timeout"></dev:param>
+				</dev:params>
+			</dev:constructor>
+			<dev:method visibility="public" type="void" name="initConnection">
+				<dev:params>
+					<dev:param type="java.lang.String" name="addrStr"></dev:param>
+					<dev:param type="int" name="port"></dev:param>
+					<dev:param type="int" name="bufferSize"></dev:param>
+					<dev:param type="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.ISocketConnectionListener" name="listener"></dev:param>
+					<dev:param type="int" name="timeout"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="&lt;i&gt;true&lt;/i&gt; if successful set, &lt;i&gt;false&lt;/i&gt; if set failed due to invalid host." type="boolean" name="setAddressAndPort">
+				<dev:params>
+					<dev:param type="java.lang.String" comment="String containing the new host name to connect to." name="host"></dev:param>
+					<dev:param type="int" comment="integer value containing the new port number to connect to." name="port"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment=",i&gt;true&lt;/i&gt; if set was successful, else &lt;i&gt;false&lt;/i&gt;" type="boolean" name="setAddressAndPort">
+				<dev:params>
+					<dev:param type="java.net.InetAddress" comment="&lt;b&gt;InetAddress&lt;/b&gt; object containing the new IP address" name="addr"></dev:param>
+					<dev:param type="int" comment="integer value containing the new port." name="port"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="setTimeout">
+				<dev:params>
+					<dev:param type="int" comment="" name="timeout"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="true if the connection was initiated, false if the address is invalid" type="boolean" name="connect"></dev:method>
+			<dev:method visibility="public" type="void" name="disconnect"></dev:method>
+			<dev:method visibility="public" type="boolean" name="isConnected"></dev:method>
+			<dev:method visibility="public" type="void" name="dispose"></dev:method>
+			<dev:method visibility="public" type="void" name="finalize"></dev:method>
+			<dev:method visibility="public" returncomment="&lt;b&gt;true&lt;/b&gt; if write was successful, else &lt;b&gt;false&lt;/b&gt;" type="boolean" name="write">
+				<dev:params>
+					<dev:param type="byte[]" comment="byte array containing data to write" name="data"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="&lt;i&gt;true&lt;/i&gt; if write or queuing was successful, else &lt;i&gt;false&lt;/i&gt;" type="boolean" name="writeQueued">
+				<dev:params>
+					<dev:param type="byte[]" comment="byte array containing data to send." name="data"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="flushQueue">
+				<dev:params>
+					<dev:param type="boolean" comment="boolean flag indicating if the queued messages should be send (&lt;i&gt;true&lt;/i&gt;) or  discarded (&lt;i&gt;false&lt;/i&gt;)" name="send"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="setOKtoSendTrue"></dev:method>
+			<dev:method visibility="public" type="void" name="run"></dev:method>
+			<dev:method visibility="public" type="void" name="setDebug">
+				<dev:params>
+					<dev:param type="boolean" comment="" name="bState"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="boolean" name="getDebug"></dev:method>
+			<dev:method visibility="public" type="void" name="setDebugDev">
+				<dev:params>
+					<dev:param type="boolean" comment="" name="bState"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="boolean" name="getDebugDev"></dev:method>
+		</dev:methods>
+	</dev:class>
+	<dev:class superclass="java.lang.Object" name="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Queue">
+		<dev:methods>
+			<dev:constructor visibility="public" name="Queue"></dev:constructor>
+			<dev:method visibility="public" returncomment="" type="int" name="getMaxQueSize"></dev:method>
+			<dev:method visibility="public" type="void" name="setMaxQueSize">
+				<dev:params>
+					<dev:param type="int" comment="[50..2000]" name="size"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="int" name="getQueSize"></dev:method>
+			<dev:method visibility="public" type="int" name="doEnq">
+				<dev:params>
+					<dev:param type="java.lang.Object" name="o"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="int" name="doPush">
+				<dev:params>
+					<dev:param type="java.lang.Object" name="o"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="java.lang.Object" name="doDeq"></dev:method>
+			<dev:method visibility="public" type="java.lang.Object" name="peek"></dev:method>
+		</dev:methods>
+	</dev:class>
+	<dev:class superclass="java.lang.Object" name="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.PriorityQueue">
+		<dev:methods>
+			<dev:constructor visibility="public" name="PriorityQueue">
+				<dev:params>
+					<dev:param type="int" comment="(max is 5. 1=lowest, 5=highest)" name="nNumberOfPriorities"></dev:param>
+				</dev:params>
+			</dev:constructor>
+			<dev:constructor visibility="public" name="PriorityQueue"></dev:constructor>
+			<dev:method visibility="public" returncomment="" type="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Queue" name="getQue">
+				<dev:params>
+					<dev:param type="int" comment="[1..5]" name="nPriorityLevel"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="int (number of elements in the entire priority queue)" type="int" name="getQueSize"></dev:method>
+			<dev:method visibility="public" returncomment="int (number of elements at that level)" type="int" name="getQueSize">
+				<dev:params>
+					<dev:param type="int" comment="" name="nPriorityLevel"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="int (priority queue size after the enque operation)" type="int" name="doEnq">
+				<dev:params>
+					<dev:param type="java.lang.Object" name="o"></dev:param>
+					<dev:param type="int" comment="" name="nPriorityLevel"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="int (size of queue after operation)" type="int" name="doPush">
+				<dev:params>
+					<dev:param type="java.lang.Object" comment="(the object to push)" name="o"></dev:param>
+					<dev:param type="int" comment="" name="nPriorityLevel"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="int (priority queue size after the enque operation)" type="int" name="doEnq">
+				<dev:params>
+					<dev:param type="java.lang.Object" name="o"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="int (size of queue after operation)" type="int" name="doPush">
+				<dev:params>
+					<dev:param type="java.lang.Object" name="o"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="object (the object dequed). Null if no object dequed." type="java.lang.Object" name="doDeq"></dev:method>
+			<dev:method visibility="public" returncomment="object (object dequed). Null if no object dequed." type="java.lang.Object" name="doDeq">
+				<dev:params>
+					<dev:param type="int" comment="" name="nPriorityLevel"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="object (the object peeked). Null if no object." type="java.lang.Object" name="peek"></dev:method>
+			<dev:method visibility="public" returncomment="object (the object peeked). Null if no object." type="java.lang.Object" name="peek">
+				<dev:params>
+					<dev:param type="int" comment="" name="nPriorityLevel"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="clearQue">
+				<dev:params>
+					<dev:param type="int" comment="" name="nPriorityLevel"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="clearQue"></dev:method>
+			<dev:method visibility="public" returncomment="boolean" type="boolean" name="isFullReplyReceivedOn"></dev:method>
+			<dev:method visibility="public" type="void" name="setFullReplyReceivedOn">
+				<dev:params>
+					<dev:param type="boolean" comment="boolean" name="state"></dev:param>
+				</dev:params>
+			</dev:method>
+		</dev:methods>
+	</dev:class>
+	<dev:class abstract="true" name="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.ISony_PCS_XG80">
+		<dev:extends>
+			<dev:extend name="com.amx.duet.devicesdk.IVideoConferencer4"></dev:extend>
+		</dev:extends>
+	</dev:class>
+	<dev:class abstract="true" name="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.ISocketConnectionListener"></dev:class>
+	<dev:class superclass="java.lang.Object" name="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.InputProperty">
+		<dev:methods>
+			<dev:constructor visibility="public" name="InputProperty">
+				<dev:params>
+					<dev:param type="int" comment="integer value representing the selectable source (group number)" name="groupNumber"></dev:param>
+					<dev:param type="java.lang.String" comment="description provided by device to represent source" name="label"></dev:param>
+					<dev:param type="java.lang.String" comment="Name on the back or front of the device" name="groupName"></dev:param>
+					<dev:param type="com.amx.duet.devicesdk.type.SignalType" comment="type of signal (Component, SVideo, etc.)" name="signalType"></dev:param>
+					<dev:param type="com.amx.duet.devicesdk.type.InputSourceSelect" comment="type of input source (NamedInput or SignalType)" name="inputSource"></dev:param>
+					<dev:param type="int" comment="" name="inputNumber"></dev:param>
+				</dev:params>
+			</dev:constructor>
+			<dev:constructor visibility="public" name="InputProperty">
+				<dev:params>
+					<dev:param type="int" comment="integer value representing the selectable source (group number)" name="groupNumber"></dev:param>
+					<dev:param type="java.lang.String" comment="description provided by device to represent source" name="label"></dev:param>
+					<dev:param type="java.lang.String" comment="Name on the back or front of the device" name="groupName"></dev:param>
+					<dev:param type="com.amx.duet.devicesdk.type.SignalType" comment="type of signal (Component, SVideo, etc.)" name="signalType"></dev:param>
+				</dev:params>
+			</dev:constructor>
+			<dev:method visibility="public" type="void" name="setDeviceLabel">
+				<dev:params>
+					<dev:param type="java.lang.String" comment="description provided by device to represent source" name="label"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="integer value representing the selectable source (group number)" type="int" name="getGroupNumber"></dev:method>
+			<dev:method visibility="public" returncomment="type of signal (SignalType)" type="com.amx.duet.devicesdk.type.SignalType" name="getSignalType"></dev:method>
+			<dev:method visibility="public" returncomment="type of source (SignalType or NamedInput)" type="com.amx.duet.devicesdk.type.InputSourceSelect" name="getInputSource"></dev:method>
+			<dev:method visibility="public" returncomment="integer value representing the input source." type="int" name="getInputNumber"></dev:method>
+			<dev:method visibility="public" returncomment="description provided by device to represent source" type="java.lang.String" name="getDeviceLabel"></dev:method>
+			<dev:method visibility="public" returncomment="Returns the group name." type="java.lang.String" name="getGroupName"></dev:method>
+			<dev:method visibility="public" returncomment="Formatted property string" type="java.lang.String" name="getInputProperty"></dev:method>
+			<dev:method visibility="public" type="java.lang.String" name="toString"></dev:method>
+		</dev:methods>
+	</dev:class>
+	<dev:class superclass="java.lang.Object" name="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.ByteBuffer">
+		<dev:fields>
+			<dev:field visibility="public" fulltype="byte" type="byte" final="true" constexpr="0" const="0" name="BIG_ENDIAN" static="true"></dev:field>
+			<dev:field visibility="public" fulltype="byte" type="byte" final="true" constexpr="1" const="1" name="LITTLE_ENDIAN" static="true"></dev:field>
+		</dev:fields>
+		<dev:methods>
+			<dev:constructor visibility="public" name="ByteBuffer"></dev:constructor>
+			<dev:constructor visibility="public" name="ByteBuffer">
+				<dev:params>
+					<dev:param type="int" comment="the initial value of the byte array" name="b"></dev:param>
+				</dev:params>
+			</dev:constructor>
+			<dev:constructor visibility="public" name="ByteBuffer">
+				<dev:params>
+					<dev:param type="byte[]" comment="a &lt;TT&gt;byte[]&lt;/TT&gt;." name="original"></dev:param>
+				</dev:params>
+			</dev:constructor>
+			<dev:constructor visibility="public" name="ByteBuffer">
+				<dev:params>
+					<dev:param type="byte[]" comment="array that is the source of bytes." name="value"></dev:param>
+					<dev:param type="int" comment="the initial offset." name="offset"></dev:param>
+					<dev:param type="int" comment="the length." name="size"></dev:param>
+				</dev:params>
+			</dev:constructor>
+			<dev:constructor visibility="public" name="ByteBuffer">
+				<dev:params>
+					<dev:param type="java.lang.String" comment="the initial value of the byte array" name="value"></dev:param>
+				</dev:params>
+			</dev:constructor>
+			<dev:constructor visibility="public" name="ByteBuffer">
+				<dev:params>
+					<dev:param type="char[]" comment="the initial value of the byte array" name="value"></dev:param>
+				</dev:params>
+			</dev:constructor>
+			<dev:method visibility="public" type="void" name="append">
+				<dev:params>
+					<dev:param type="int" comment="" name="b"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="append">
+				<dev:params>
+					<dev:param type="byte[]" comment="" name="value"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="append">
+				<dev:params>
+					<dev:param type="byte[]" comment="" name="value"></dev:param>
+					<dev:param type="int" comment="" name="offset"></dev:param>
+					<dev:param type="int" comment="" name="size"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="append">
+				<dev:params>
+					<dev:param type="java.lang.String" comment="" name="value"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" name="append">
+				<dev:params>
+					<dev:param type="char[]" comment="" name="value"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="byte" name="byteAt">
+				<dev:params>
+					<dev:param type="int" comment="" name="index"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="int" name="UByteAt">
+				<dev:params>
+					<dev:param type="int" comment="" name="index"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="char" name="charAt">
+				<dev:params>
+					<dev:param type="int" comment="" name="index"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="boolean" name="getBoolean">
+				<dev:params>
+					<dev:param type="int" comment="" name="index"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="char" name="getChar">
+				<dev:params>
+					<dev:param type="int" comment="" name="index"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="short" name="getShort">
+				<dev:params>
+					<dev:param type="int" comment="" name="index"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="int" name="getInt">
+				<dev:params>
+					<dev:param type="int" comment="" name="index"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="long" name="getLong">
+				<dev:params>
+					<dev:param type="int" comment="" name="index"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="float" name="getFloat">
+				<dev:params>
+					<dev:param type="int" comment="" name="index"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="double" name="getDouble">
+				<dev:params>
+					<dev:param type="int" comment="" name="index"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="java.lang.String" name="getString">
+				<dev:params>
+					<dev:param type="int" comment="" name="index"></dev:param>
+					<dev:param type="int" comment="" name="length"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="byte[]" name="toByteArray"></dev:method>
+			<dev:method visibility="public" returncomment="" type="char[]" name="toCharArray"></dev:method>
+			<dev:method visibility="public" returncomment="String representation of a byte array" type="java.lang.String" name="toString"></dev:method>
+			<dev:method visibility="public" returncomment="ASCII hex representation of a byte array" type="java.lang.String" name="toHex"></dev:method>
+			<dev:method visibility="public" returncomment="the number of valid bytes in the byte array." type="int" name="length"></dev:method>
+			<dev:method visibility="public" type="void" name="clear"></dev:method>
+			<dev:method visibility="public" returncomment="the index of the first occurrence of the byte in the           byte sequence represented by this object, or           &lt;code&gt;-1&lt;/code&gt; if the byte does not occur." type="int" name="indexof">
+				<dev:params>
+					<dev:param type="int" comment="a byte." name="value"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="int" name="indexof">
+				<dev:params>
+					<dev:param type="int" comment="" name="value"></dev:param>
+					<dev:param type="int" comment="" name="fromIndex"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="int" name="indexof">
+				<dev:params>
+					<dev:param type="byte[]" comment="" name="value"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="int" name="indexof">
+				<dev:params>
+					<dev:param type="byte[]" comment="" name="value"></dev:param>
+					<dev:param type="int" comment="" name="fromIndex"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="int" name="indexof">
+				<dev:params>
+					<dev:param type="char[]" comment="" name="value"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="int" name="indexof">
+				<dev:params>
+					<dev:param type="char[]" comment="" name="value"></dev:param>
+					<dev:param type="int" comment="" name="fromIndex"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="if the string argument occurs as a substring within this           object, then the index of the first character of the first           such substring is returned; if it does not occur as a           substring, &lt;code&gt;-1&lt;/code&gt; is returned." type="int" name="indexof">
+				<dev:params>
+					<dev:param type="java.lang.String" name="value"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="int" name="indexof">
+				<dev:params>
+					<dev:param type="java.lang.String" comment="" name="value"></dev:param>
+					<dev:param type="int" comment="" name="fromIndex"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="true if the character sequence represented by the argument is a prefix of the character sequence   represented by this byte buffer; false otherwise. Note also that true will be returned if the argument   is an empty string or is equal to this ByteBuffer object as determined by the equals(Object) method." type="boolean" name="startsWith">
+				<dev:params>
+					<dev:param type="java.lang.String" comment="the prefix" name="str"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="true if the character sequence represented by the argument is a suffix of the character sequence   represented by this object; false otherwise. Note that the result will be true if the argument is the   empty string or is equal to this ByteBuffer object as determined by the equals(Object) method." type="boolean" name="endsWith">
+				<dev:params>
+					<dev:param type="java.lang.String" comment="the suffix." name="str"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="An empty byte buffer." type="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.ByteBuffer" name="delete"></dev:method>
+			<dev:method visibility="public" returncomment="This byte buffer." type="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.ByteBuffer" name="delete">
+				<dev:params>
+					<dev:param type="int" comment="The number of characters to remove from beginning to &lt;code&gt;len&lt;/code&gt;." name="len"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="This byte buffer." type="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.ByteBuffer" name="delete">
+				<dev:params>
+					<dev:param type="int" comment="The beginning index, inclusive." name="start"></dev:param>
+					<dev:param type="int" comment="The ending index, exclusive." name="end"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="This byte buffer." type="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.ByteBuffer" name="replace">
+				<dev:params>
+					<dev:param type="int" comment="The beginning index, inclusive." name="start"></dev:param>
+					<dev:param type="int" comment="The ending index, exclusive." name="end"></dev:param>
+					<dev:param type="byte[]" comment="Byte[] that will replace previous contents." name="value"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="the newly replaced bytes" type="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.ByteBuffer" name="replace">
+				<dev:params>
+					<dev:param type="byte[]" comment="Pattern to remove from source." name="pattern"></dev:param>
+					<dev:param type="byte[]" comment="Pattern to replace removed pattern with." name="replace"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="the newly replaced bytes" type="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.ByteBuffer" name="replace">
+				<dev:params>
+					<dev:param type="int" comment="The beginning index, inclusive." name="start"></dev:param>
+					<dev:param type="int" comment="The ending index, exclusive." name="end"></dev:param>
+					<dev:param type="byte[]" comment="Pattern to remove from source." name="pattern"></dev:param>
+					<dev:param type="byte[]" comment="Pattern to replace removed pattern with." name="replace"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="the newly replaced bytes" type="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.ByteBuffer" name="replace">
+				<dev:params>
+					<dev:param type="byte[][]" comment="Patterns to remove from source." name="pattern"></dev:param>
+					<dev:param type="byte[][]" comment="Patterns to replace removed patterns with." name="replace"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="the newly replaced bytes" type="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.ByteBuffer" name="replace">
+				<dev:params>
+					<dev:param type="int" comment="The beginning index, inclusive." name="start"></dev:param>
+					<dev:param type="int" comment="The ending index, exclusive." name="end"></dev:param>
+					<dev:param type="byte[][]" comment="Patterns to remove from source." name="pattern"></dev:param>
+					<dev:param type="byte[][]" comment="Patterns to replace removed patterns with." name="replace"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="The new ByteBuffer." type="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.ByteBuffer" name="substring">
+				<dev:params>
+					<dev:param type="int" comment="The beginning index, inclusive." name="start"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="The new ByteBuffer." type="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.ByteBuffer" name="substring">
+				<dev:params>
+					<dev:param type="int" comment="The beginning index, inclusive." name="start"></dev:param>
+					<dev:param type="int" comment="The ending index, exclusive." name="end"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="empty string or the logged data." type="java.lang.String" name="logHex" static="true">
+				<dev:params>
+					<dev:param type="byte[]" comment="data to log" name="message"></dev:param>
+					<dev:param type="int" comment="number of bytes to log" name="length"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="empty string or the logged data." type="java.lang.String" name="logHex" static="true">
+				<dev:params>
+					<dev:param type="byte[]" comment="data to log" name="message"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="byte[]" name="toBytes" static="true">
+				<dev:params>
+					<dev:param type="boolean" comment="" name="value"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="byte[]" name="toBytes" static="true">
+				<dev:params>
+					<dev:param type="byte" comment="" name="value"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="byte[]" name="toBytes" static="true">
+				<dev:params>
+					<dev:param type="char" comment="" name="value"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="byte[]" name="toBytes" static="true">
+				<dev:params>
+					<dev:param type="short" comment="" name="value"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="byte[]" name="toBytes" static="true">
+				<dev:params>
+					<dev:param type="int" comment="" name="value"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="byte[]" name="toBytes" static="true">
+				<dev:params>
+					<dev:param type="long" comment="" name="value"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="byte[]" name="toBytes" static="true">
+				<dev:params>
+					<dev:param type="float" comment="" name="value"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="byte[]" name="toBytes" static="true">
+				<dev:params>
+					<dev:param type="double" comment="" name="value"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="byte[]" name="toBytes" static="true">
+				<dev:params>
+					<dev:param type="java.lang.String" comment="" name="value"></dev:param>
+				</dev:params>
+			</dev:method>
+		</dev:methods>
+	</dev:class>
+	<dev:class superclass="java.lang.Object" name="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Bits">
+		<dev:methods>
+			<dev:constructor visibility="public" name="Bits"></dev:constructor>
+			<dev:method visibility="public" returncomment="" type="boolean" final="true" name="getBoolean" static="true">
+				<dev:params>
+					<dev:param type="byte[]" comment="" name="b"></dev:param>
+					<dev:param type="int" comment="" name="off"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="char" final="true" name="getChar" static="true">
+				<dev:params>
+					<dev:param type="byte[]" comment="" name="b"></dev:param>
+					<dev:param type="int" comment="" name="off"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="short" final="true" name="getShort" static="true">
+				<dev:params>
+					<dev:param type="byte[]" comment="" name="b"></dev:param>
+					<dev:param type="int" comment="" name="off"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="int" final="true" name="getInt" static="true">
+				<dev:params>
+					<dev:param type="byte[]" comment="" name="b"></dev:param>
+					<dev:param type="int" comment="" name="off"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="float" final="true" name="getFloat" static="true">
+				<dev:params>
+					<dev:param type="byte[]" comment="" name="b"></dev:param>
+					<dev:param type="int" comment="" name="off"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="long" final="true" name="getLong" static="true">
+				<dev:params>
+					<dev:param type="byte[]" comment="" name="b"></dev:param>
+					<dev:param type="int" comment="" name="off"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="" type="double" final="true" name="getDouble" static="true">
+				<dev:params>
+					<dev:param type="byte[]" comment="" name="b"></dev:param>
+					<dev:param type="int" comment="" name="off"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" final="true" name="putBoolean" static="true">
+				<dev:params>
+					<dev:param type="byte[]" comment="" name="b"></dev:param>
+					<dev:param type="int" comment="" name="off"></dev:param>
+					<dev:param type="boolean" comment="" name="val"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" final="true" name="putChar" static="true">
+				<dev:params>
+					<dev:param type="byte[]" comment="" name="b"></dev:param>
+					<dev:param type="int" comment="" name="off"></dev:param>
+					<dev:param type="char" comment="" name="val"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" final="true" name="putShort" static="true">
+				<dev:params>
+					<dev:param type="byte[]" comment="" name="b"></dev:param>
+					<dev:param type="int" comment="" name="off"></dev:param>
+					<dev:param type="short" comment="" name="val"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" final="true" name="putInt" static="true">
+				<dev:params>
+					<dev:param type="byte[]" comment="" name="b"></dev:param>
+					<dev:param type="int" comment="" name="off"></dev:param>
+					<dev:param type="int" comment="" name="val"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" final="true" name="putFloat" static="true">
+				<dev:params>
+					<dev:param type="byte[]" comment="" name="b"></dev:param>
+					<dev:param type="int" comment="" name="off"></dev:param>
+					<dev:param type="float" comment="" name="val"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" final="true" name="putLong" static="true">
+				<dev:params>
+					<dev:param type="byte[]" comment="" name="b"></dev:param>
+					<dev:param type="int" comment="" name="off"></dev:param>
+					<dev:param type="long" comment="" name="val"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" type="void" final="true" name="putDouble" static="true">
+				<dev:params>
+					<dev:param type="byte[]" comment="" name="b"></dev:param>
+					<dev:param type="int" comment="" name="off"></dev:param>
+					<dev:param type="double" comment="" name="val"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="true if the bit is set; false otherwise." type="boolean" final="true" name="isBitSet" static="true">
+				<dev:params>
+					<dev:param type="int" comment="8 bit value" name="value"></dev:param>
+					<dev:param type="int" comment="0-7 (bytes 1-8 respectively)" name="pos"></dev:param>
+				</dev:params>
+			</dev:method>
+			<dev:method visibility="public" returncomment="the byte array in reverse order." type="byte[]" final="true" name="flipBytes" static="true">
+				<dev:params>
+					<dev:param type="byte[]" comment="byte array to flip." name="b"></dev:param>
+				</dev:params>
+			</dev:method>
+		</dev:methods>
+	</dev:class>
+	<dev:class superclass="com.amx.duet.devicesdk.base.ModuleActivator" name="com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Activator"></dev:class>
+	</dev:type-info>
+	&components;
+</dev:module>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Workspace [
+
+<!-- Common Elements -->
+<!ELEMENT Identifier (#PCDATA)>
+<!ELEMENT Comments (#PCDATA)>
+<!ELEMENT CreationDate (#PCDATA)>
+
+<!-- Workspace Elements-->
+<!ELEMENT Workspace ( Identifier,
+               CreateVersion,
+               PJS_File?,
+               PJS_ConvertDate?,
+               PJS_CreateDate?,
+               Comments?,
+               Project*)>
+
+<!ATTLIST Workspace 
+      CurrentVersion CDATA   #REQUIRED> 
+
+<!ELEMENT CreateVersion     (#PCDATA)>
+
+
+<!-- Conversion data only: only included for files converted from the old .pjs database -->
+<!ELEMENT PJS_File (#PCDATA)>
+<!ELEMENT PJS_ConvertDate (#PCDATA)>
+<!ELEMENT PJS_CreateDate (#PCDATA)>
+
+<!ELEMENT Project ( Identifier,
+               Designer?,
+               DealerID?,
+               SalesOrder?,
+               PurchaseOrder?,
+               Comments?,
+               System*)>
+
+<!ELEMENT Designer (#PCDATA)>
+<!ELEMENT DealerID (#PCDATA)>
+<!ELEMENT SalesOrder (#PCDATA)>
+<!ELEMENT PurchaseOrder (#PCDATA)>
+
+
+<!ELEMENT System  (  Identifier,
+                 SysID,
+                 TransSerial?,
+                 TransModem?,
+                 TransTCPIP?,
+                 VirtualNetLinxMasterFlag?,
+                 VNMRestoreIPSettings?,
+                 VNMSystemID?,
+                 VNMIPAddress?,
+                 VNMMaskAddress?,
+                 IsAuthenticationEnabled?,
+                 UserName?,
+                 Password?,
+                 Comments?,
+                 File*)>
+
+<!ATTLIST System
+      IsActive   (true | false)   "false"
+      Platform   (Axcess | Netlinx)   "Axcess"
+      Transport   (Serial | Modem | TCPIP) "Serial">
+
+<!ELEMENT SysID (#PCDATA)>
+<!ELEMENT TransSerial (#PCDATA)>
+<!ELEMENT TransModem (#PCDATA)>
+<!ELEMENT TransTCPIP (#PCDATA)>
+<!ELEMENT VirtualNetLinxMasterFlag (#PCDATA)>
+<!ELEMENT VNMRestoreIPSettings (#PCDATA)>
+<!ELEMENT VNMSystemID (#PCDATA)>
+<!ELEMENT VNMIPAddress (#PCDATA)>
+<!ELEMENT VNMMaskAddress (#PCDATA)>
+<!ELEMENT IsAuthenticationEnabled (#PCDATA)>
+<!ELEMENT UserName (#PCDATA)>
+<!ELEMENT Password (#PCDATA)>
+
+
+<!ELEMENT File ( Identifier,
+               FilePathName,
+               Comments?,
+               DeviceMap*,
+               IRDB*)>
+
+<!ATTLIST File 
+       Type (Source | MasterSrc | Include | Module | AXB | IR | TPD | TP4 | KPD | TKO | AMX_IR_DB | IRN_DB | Other | DUET | TOK | TKN | KPB ) "Other"
+       CompileType (Axcess | Netlinx | None) "None"> 
+
+<!ELEMENT FilePathName	(#PCDATA)>
+                            
+<!ELEMENT DeviceMap (DevName)>
+       <!ATTLIST DeviceMap DevAddr CDATA #REQUIRED>
+
+       <!ELEMENT DevName (#PCDATA)>
+
+<!ELEMENT IRDB    (Property,
+                 DOSName,
+                 UserDBPathName,
+                 Notes)>
+       <!ATTLIST IRDB DBKey CDATA #REQUIRED>
+
+       <!ELEMENT Property (#PCDATA)>
+       <!ELEMENT DOSName (#PCDATA)>
+       <!ELEMENT UserDBPathName (#PCDATA)>
+       <!ELEMENT Notes (#PCDATA)>
+]>
+
+<Workspace CurrentVersion="3.2"><Identifier>PTHS Comfrences</Identifier>
+<CreateVersion>3.2</CreateVersion>
+<PJS_File></PJS_File>
+<PJS_ConvertDate></PJS_ConvertDate>
+<PJS_CreateDate></PJS_CreateDate>
+<Comments></Comments>
+<Project><Identifier>PTHS Confrences</Identifier>
+<Designer></Designer>
+<DealerID></DealerID>
+<SalesOrder></SalesOrder>
+<PurchaseOrder></PurchaseOrder>
+<Comments></Comments>
+<System IsActive="true" Platform="Netlinx" Transport="TCPIP"><Identifier>PTHS Confrences</Identifier>
+<SysID>1</SysID>
+<TransSerial>COM7,38400,8,None,1,None</TransSerial>
+<TransModem>COM1,38400,8,None,1,None</TransModem>
+<TransTCPIP>192.168.10.10:1319:1:Polytechnic HS Conference Halls</TransTCPIP>
+<VirtualNetLinxMasterFlag>0</VirtualNetLinxMasterFlag>
+<VNMRestoreIPSettings>0.0.0.0:1319:1</VNMRestoreIPSettings>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<IsAuthenticationEnabled>0</IsAuthenticationEnabled>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="None" Type="Other"><Identifier>NI-3100.InstallationGuide</Identifier>
+<FilePathName>..\..\..\..\AMX\Product Documentation\Control System\NI-3100.InstallationGuide.pdf</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Other"><Identifier>GBSCommsMod Module Description</Identifier>
+<FilePathName>..\..\..\..\AMX\Product Documentation\GBS Lighting Systems\GBSCommsMod Module Description.docx</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Other"><Identifier>MVG VGA matrix 100101</Identifier>
+<FilePathName>..\..\..\..\AMX\Product Documentation\Matrix Switcher\MVG VGA matrix 100101.pdf</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Include"><Identifier>Combine Conference</Identifier>
+<FilePathName>Combine Conference.axi</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Include"><Identifier>Conference 1</Identifier>
+<FilePathName>Conference 1.axi</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Include"><Identifier>Conference 2</Identifier>
+<FilePathName>Conference 2.axi</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Include"><Identifier>Conference 3</Identifier>
+<FilePathName>Conference 3.axi</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Include"><Identifier>DVD</Identifier>
+<FilePathName>DVD.axi</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="IR"><Identifier>GRANDVIEW_SCREEN</Identifier>
+<FilePathName>IR_Files\GRANDVIEW_SCREEN.irl</FilePathName>
+<Comments></Comments>
+<DeviceMap DevAddr="dvSCREEN1"><DevName>dvSCREEN1</DevName>
+</DeviceMap>
+<DeviceMap DevAddr="dvSCREEN2"><DevName>dvSCREEN2</DevName>
+</DeviceMap>
+</File>
+<File CompileType="None" Type="IR"><Identifier>Sony RPR-HX780 HDD-DVD</Identifier>
+<FilePathName>IR_Files\Sony RPR-HX780 HDD-DVD.irl</FilePathName>
+<Comments></Comments>
+<DeviceMap DevAddr="dvDVD"><DevName>dvDVD</DevName>
+</DeviceMap>
+</File>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>MAIN</Identifier>
+<FilePathName>MAIN.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="TKO"><Identifier>GBSCommMod</Identifier>
+<FilePathName>Modules\GBS Lighting Systems\GBSCommMod.tko</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Include"><Identifier>Green Box Systems Wired Initialisation</Identifier>
+<FilePathName>Modules\GBS Lighting Systems\Green Box Systems Wired Initialisation.axi</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="TP4"><Identifier>TP1_CONF1</Identifier>
+<FilePathName>TP files\TP1_CONF1.TP4</FilePathName>
+<Comments></Comments>
+<DeviceMap DevAddr="dvTP1"><DevName>dvTP1</DevName>
+</DeviceMap>
+</File>
+<File CompileType="None" Type="TP4"><Identifier>TP1_CONF2</Identifier>
+<FilePathName>TP files\TP1_CONF2.TP4</FilePathName>
+<Comments></Comments>
+<DeviceMap DevAddr="dvTP2"><DevName>dvTP2</DevName>
+</DeviceMap>
+</File>
+<File CompileType="None" Type="TP4"><Identifier>TP1_CONF3</Identifier>
+<FilePathName>TP files\TP1_CONF3.TP4</FilePathName>
+<Comments></Comments>
+<DeviceMap DevAddr="dvTP3"><DevName>dvTP3</DevName>
+</DeviceMap>
+</File>
+</System>
+</Project>
+</Workspace>

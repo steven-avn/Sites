@@ -1,0 +1,785 @@
+<HTML>
+
+<HEAD>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<TITLE>KeypadBuilder Programmer's Report - Panel: Mio Modero DMS Keypad</TITLE>
+
+	<style>
+		<!--
+		/* Style Definitions */
+		BODY
+		{
+			BACKGROUND-COLOR: #ffffff;
+			COLOR: #000000;
+			FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+			FONT-SIZE: 10pt;
+			FONT-STYLE: normal;
+			FONT-WEIGHT: normal
+		}
+		.Header1
+		{
+			BACKGROUND-COLOR: #ffffff;
+			COLOR: #000000;
+			FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+			FONT-SIZE: 14pt;
+			FONT-STYLE: normal;
+			FONT-WEIGHT: bold
+		}
+		.Header2
+		{
+			BACKGROUND-COLOR: #ffffff;
+			COLOR: #000000;
+			FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+			FONT-SIZE: 12pt;
+			FONT-STYLE: normal;
+			FONT-WEIGHT: normal
+		}
+		.NoData
+		{
+			BACKGROUND-COLOR: #ffffff;
+			COLOR: #000000;
+			FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+			FONT-SIZE: 12pt;
+			FONT-STYLE: normal;
+			FONT-WEIGHT: bold
+		}
+		.SectionHeader
+		{
+			BACKGROUND-COLOR: #ffffff;
+			COLOR: #000000;
+			FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+			FONT-SIZE: 12pt;
+			FONT-STYLE: normal;
+			FONT-WEIGHT: bold;
+			TEXT-DECORATION: underline
+		}
+		.TableFieldTitle
+		{
+			FONT-WEIGHT: bold;
+			FONT-SIZE: 14px;
+			COLOR: black;
+			FONT-FAMILY: Verdana, Arial, 'Arial Black', Tahoma;
+			HEIGHT: 16pt;
+			BACKGROUND-COLOR: #E0E0E0
+		}
+		TR
+		{
+			FONT-WEIGHT: normal;
+			FONT-SIZE: 12px;
+			COLOR: black;
+			FONT-FAMILY: Verdana, Arial, 'Arial Black', Tahoma;
+			HEIGHT: 14px
+		}
+		.TR_Highlight
+		{
+			FONT-WEIGHT: normal;
+			FONT-SIZE: 12px;
+			COLOR: black;
+			FONT-FAMILY: Verdana, Arial, 'Arial Black', Tahoma;
+			HEIGHT: 14px;
+			BACKGROUND-COLOR: #CCFFCC
+		}
+		.TD_SectionTitle
+		{
+			FONT-WEIGHT: normal;
+			FONT-SIZE: 12px;
+			COLOR: black;
+			FONT-FAMILY: Verdana, Arial, 'Arial Black', Tahoma;
+			HEIGHT: 14px;
+			BACKGROUND-COLOR: #CCFFFF
+		}
+		A.Hover:hover
+		{
+			COLOR: #ff0000;
+			FONT-SIZE: 10pt;
+			FONT-WEIGHT: bold;
+			TEXT-DECORATION: none
+		}
+		HR
+		{
+			COLOR: black;
+			BORDER-BOTTOM: gray groove;
+			HEIGHT: 3px
+		}
+		-->
+	</style>
+
+</HEAD>
+
+<BODY>
+
+	<SPAN CLASS="Header1">KeypadBuilder Programmer's Report - Panel: Mio Modero DMS Keypad</SPAN><BR>
+
+	<SPAN CLASS="Header2">Monday, February 12, 2007 09:48 PM</SPAN><BR><BR><BR>
+
+	<SPAN CLASS="SectionHeader">Report Topics</SPAN><BR>
+
+	&nbsp;&nbsp;&nbsp; <A HREF="#FontUtilization">Fonts</A><BR>
+	&nbsp;&nbsp;&nbsp; <A HREF="#FunctionCodeUtilization">Function Codes</A><BR>
+	&nbsp;&nbsp;&nbsp; <A HREF="#ListTablesDataUtilization">List Table Data</A><BR>
+
+	<BR>
+
+	<!--Report starts here-->
+
+	<HR>
+
+	<A NAME="FontUtilization"></A><SPAN CLASS="SectionHeader"><CENTER>Fonts</CENTER></SPAN><BR>
+
+	<DIV ALIGN="CENTER">
+		<TABLE BORDER="1" WIDTH="500" CELLSPACING="0" CELLPADDING="0">
+			<TR CLASS=TableFieldTitle>
+				<TD>&nbsp;Font ID</TD>
+				<TD>&nbsp;Font Name</TD>
+				<TD>&nbsp;Size</TD>
+				<TD>&nbsp;File Size</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;22</TD>
+				<TD>&nbsp;Verdana Bold</TD>
+				<TD>&nbsp;8</TD>
+				<TD>&nbsp;134.4 KB</TD>
+			</TR>
+			<TR>
+				<TD>&nbsp;23</TD>
+				<TD>&nbsp;Verdana Bold</TD>
+				<TD>&nbsp;14</TD>
+				<TD>&nbsp;</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;24</TD>
+				<TD>&nbsp;Verdana Bold</TD>
+				<TD>&nbsp;13</TD>
+				<TD>&nbsp;</TD>
+			</TR>
+			<TR>
+				<TD>&nbsp;26</TD>
+				<TD>&nbsp;Verdana Bold</TD>
+				<TD>&nbsp;24</TD>
+				<TD>&nbsp;</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;32</TD>
+				<TD>&nbsp;Verdana</TD>
+				<TD>&nbsp;14</TD>
+				<TD>&nbsp;167.8 KB</TD>
+			</TR>
+			<TR>
+				<TD>&nbsp;34</TD>
+				<TD>&nbsp;Verdana</TD>
+				<TD>&nbsp;10</TD>
+				<TD>&nbsp;</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;36</TD>
+				<TD>&nbsp;Arial</TD>
+				<TD>&nbsp;10</TD>
+				<TD>&nbsp;358.5 KB</TD>
+			</TR>
+			<TR>
+				<TD>&nbsp;40</TD>
+				<TD>&nbsp;Arial</TD>
+				<TD>&nbsp;14</TD>
+				<TD>&nbsp;</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;44</TD>
+				<TD>&nbsp;Arial Bold</TD>
+				<TD>&nbsp;9</TD>
+				<TD>&nbsp;344.0 KB</TD>
+			</TR>
+			<TR>
+				<TD>&nbsp;45</TD>
+				<TD>&nbsp;XiVA Symbol</TD>
+				<TD>&nbsp;14</TD>
+				<TD>&nbsp;36.9 KB</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;58</TD>
+				<TD>&nbsp;Arial</TD>
+				<TD>&nbsp;12</TD>
+				<TD>&nbsp;</TD>
+			</TR>
+			<TR>
+				<TD>&nbsp;61</TD>
+				<TD>&nbsp;Arial</TD>
+				<TD>&nbsp;8</TD>
+				<TD>&nbsp;</TD>
+			</TR>
+		</TABLE>
+
+		<BR>
+		<SPAN CLASS="Header2">Total number of fonts entries utilized:&nbsp;12</SPAN>
+	</DIV>
+
+		<BR>
+		<SPAN CLASS="Header2"><CENTER>Total number of unique fonts utilized:&nbsp;5</CENTER></SPAN>
+	</DIV>
+
+		<BR>
+		<SPAN CLASS="Header2"><CENTER>Total size of all fonts:&nbsp;1.0 MB<CENTER></SPAN>
+	</DIV>
+
+	<BR>
+	<A HREF="#top">Top</A>
+	<HR>
+
+	<A NAME="FunctionCodeUtilization"></A><SPAN CLASS="SectionHeader"><CENTER>Function Codes</CENTER></SPAN><BR>
+
+	<DIV ALIGN="CENTER">
+		<TABLE BORDER="1" WIDTH="100%" CELLSPACING="0" CELLPADDING="0">
+			<COL WIDTH=15%>
+			<COL WIDTH=15%>
+			<COL WIDTH=15%>
+			<COL WIDTH=15%>
+			<COL WIDTH=*>
+			<TR CLASS=TableFieldTitle>
+				<TD>&nbsp;Page Name</TD>
+				<TD>&nbsp;Button Name</TD>
+				<TD>&nbsp;Channel Port:Code</TD>
+				<TD>&nbsp;Address Port:Code</TD>
+				<TD>&nbsp;Description</TD>
+			</TR>
+
+			<TR>
+				<TD COLSPAN="6" CLASS="TD_SectionTitle"><B>&nbsp;XiVA-Browser-A1-Artists</B></TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Artist.Title</TD>
+				<TD>&nbsp;2:152</TD>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Page Title. PUSH: Scroll UP</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Artist.List.Item1</TD>
+				<TD>&nbsp;2:1</TD>
+				<TD>&nbsp;2:1</TD>
+				<TD>&nbsp;List Item #1. Push Selects Item. Hold shows Albums.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Artist.List.Item2</TD>
+				<TD>&nbsp;2:2</TD>
+				<TD>&nbsp;2:2</TD>
+				<TD>&nbsp;List Item #2. Push Selects Item. Hold shows Albums.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Artist.List.Item3</TD>
+				<TD>&nbsp;2:3</TD>
+				<TD>&nbsp;2:3</TD>
+				<TD>&nbsp;List Item #3. Push Selects Item. Hold shows Albums.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Artist.List.Item4</TD>
+				<TD>&nbsp;2:4</TD>
+				<TD>&nbsp;2:4</TD>
+				<TD>&nbsp;List Item #4. Push Selects Item. Hold shows Albums.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Artists.PageInfo</TD>
+				<TD>&nbsp;2:246</TD>
+				<TD>&nbsp;2:161</TD>
+				<TD>&nbsp;Page Info. "Page X of XXX". PUSH: add to Q. HOLD: play now</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Artists.Back</TD>
+				<TD>&nbsp;2:157</TD>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Back</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Artists.Help</TD>
+				<TD>&nbsp;2:151</TD>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Help Text</TD>
+			</TR>
+
+			<TR>
+				<TD COLSPAN="6" CLASS="TD_SectionTitle"><B>&nbsp;XiVA-Browser-A12-NowPlaying</B></TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;NowPlaying.Track.Title</TD>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;2:192</TD>
+				<TD>&nbsp;Track Title Text</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;NowPlaying.Track.Artist</TD>
+				<TD>&nbsp;2:188</TD>
+				<TD>&nbsp;2:193</TD>
+				<TD>&nbsp;Track Artist Text. PUSH: repeat.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;NowPlaying.Track.Album</TD>
+				<TD>&nbsp;2:189</TD>
+				<TD>&nbsp;2:194</TD>
+				<TD>&nbsp;Track Album Text. PUSH: shuffle.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;NowPlaying.Transport</TD>
+				<TD>&nbsp;2:181</TD>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Tansport Functions. Play/Pause</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;NowPlaying.Status</TD>
+				<TD>&nbsp;2:182</TD>
+				<TD>&nbsp;2:245</TD>
+				<TD>&nbsp;Playback Status Display. EG: "Elapsed 00:00:00 [Playing]"</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;NowPlaying.Back</TD>
+				<TD>&nbsp;2:122</TD>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Back to main library selections.</TD>
+			</TR>
+
+			<TR>
+				<TD COLSPAN="6" CLASS="TD_SectionTitle"><B>&nbsp;XiVA-Browser-A2-Albums</B></TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Album.List.Item1</TD>
+				<TD>&nbsp;2:11</TD>
+				<TD>&nbsp;2:11</TD>
+				<TD>&nbsp;List Item #1. Push Selects Item. Hold shows Tracks.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Album.List.Item2</TD>
+				<TD>&nbsp;2:12</TD>
+				<TD>&nbsp;2:12</TD>
+				<TD>&nbsp;List Item #2. Push Selects Item. Hold shows Tracks.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Album.List.Item3</TD>
+				<TD>&nbsp;2:13</TD>
+				<TD>&nbsp;2:13</TD>
+				<TD>&nbsp;List Item #3. Push Selects Item. Hold shows Tracks.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Album.List.Item4</TD>
+				<TD>&nbsp;2:14</TD>
+				<TD>&nbsp;2:14</TD>
+				<TD>&nbsp;List Item #1. Push Selects Item. Hold shows Tracks.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Albums.PageInfo</TD>
+				<TD>&nbsp;2:246</TD>
+				<TD>&nbsp;2:162</TD>
+				<TD>&nbsp;Page Info. "Page X of XXX". PUSH: add to Q. HOLD: play now</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Albums.Back</TD>
+				<TD>&nbsp;2:157</TD>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Back</TD>
+			</TR>
+
+			<TR>
+				<TD COLSPAN="6" CLASS="TD_SectionTitle"><B>&nbsp;XiVA-Browser-A3-Tracks</B></TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Tracks.List.Item1</TD>
+				<TD>&nbsp;2:21</TD>
+				<TD>&nbsp;2:21</TD>
+				<TD>&nbsp;List Item #1. Push Selects Item. Hold does nothing.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Tracks.List.Item2</TD>
+				<TD>&nbsp;2:22</TD>
+				<TD>&nbsp;2:22</TD>
+				<TD>&nbsp;List Item #2. Push Selects Item. Hold does nothing.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Tracks.List.Item3</TD>
+				<TD>&nbsp;2:23</TD>
+				<TD>&nbsp;2:23</TD>
+				<TD>&nbsp;List Item #3. Push Selects Item. Hold does nothing.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Tracks.List.Item4</TD>
+				<TD>&nbsp;2:24</TD>
+				<TD>&nbsp;2:24</TD>
+				<TD>&nbsp;List Item #4. Push Selects Item. Hold does nothing.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Tracks.PageInfo</TD>
+				<TD>&nbsp;2:246</TD>
+				<TD>&nbsp;2:163</TD>
+				<TD>&nbsp;Page Info. "Page X of XXX". PUSH: add to Q. HOLD: play now</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Tracks.Back</TD>
+				<TD>&nbsp;2:157</TD>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Back</TD>
+			</TR>
+
+			<TR>
+				<TD COLSPAN="6" CLASS="TD_SectionTitle"><B>&nbsp;XiVA-Browser-A11-PlayQueue</B></TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;PlayQueue.List.Item1</TD>
+				<TD>&nbsp;2:101</TD>
+				<TD>&nbsp;2:101</TD>
+				<TD>&nbsp;List Item #1. Push Selects Item. Hold does nothing.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;PlayQueue.List.Item2</TD>
+				<TD>&nbsp;2:102</TD>
+				<TD>&nbsp;2:102</TD>
+				<TD>&nbsp;List Item #2. Push Selects Item. Hold does nothing.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;PlayQueue.List.Item3</TD>
+				<TD>&nbsp;2:103</TD>
+				<TD>&nbsp;2:103</TD>
+				<TD>&nbsp;List Item #3. Push Selects Item. Hold does nothing.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;PlayQueue.List.Item4</TD>
+				<TD>&nbsp;2:104</TD>
+				<TD>&nbsp;2:104</TD>
+				<TD>&nbsp;List Item #4. Push Selects Item. Hold does nothing.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;PlayQueue.PageInfo</TD>
+				<TD>&nbsp;2:246</TD>
+				<TD>&nbsp;2:171</TD>
+				<TD>&nbsp;Page Info. "Page X of XXX". PUSH: play now. HOLD: remove from Q.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;PlayQueue.Back</TD>
+				<TD>&nbsp;2:157</TD>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Back</TD>
+			</TR>
+
+			<TR>
+				<TD COLSPAN="6" CLASS="TD_SectionTitle"><B>&nbsp;XiVA-Browser-A7-Years</B></TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Years.List.Item1</TD>
+				<TD>&nbsp;2:61</TD>
+				<TD>&nbsp;2:61</TD>
+				<TD>&nbsp;List Item #1. Push Selects Item. Hold show tracks.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Years.List.Item2</TD>
+				<TD>&nbsp;2:62</TD>
+				<TD>&nbsp;2:62</TD>
+				<TD>&nbsp;List Item #2. Push Selects Item. Hold show tracks.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Years.List.Item3</TD>
+				<TD>&nbsp;2:63</TD>
+				<TD>&nbsp;2:63</TD>
+				<TD>&nbsp;List Item #3. Push Selects Item. Hold show tracks.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Years.List.Item4</TD>
+				<TD>&nbsp;2:64</TD>
+				<TD>&nbsp;2:64</TD>
+				<TD>&nbsp;List Item #4. Push Selects Item. Hold show tracks.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Years.PageInfo</TD>
+				<TD>&nbsp;2:246</TD>
+				<TD>&nbsp;2:167</TD>
+				<TD>&nbsp;Page Info. "Page X of XXX". PUSH: add to Q. HOLD: play now.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Years.Back</TD>
+				<TD>&nbsp;2:157</TD>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Back</TD>
+			</TR>
+
+			<TR>
+				<TD COLSPAN="6" CLASS="TD_SectionTitle"><B>&nbsp;XiVA-Browser-A6-Eras</B></TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Eras.List.Item1</TD>
+				<TD>&nbsp;2:51</TD>
+				<TD>&nbsp;2:51</TD>
+				<TD>&nbsp;List Item #1. Push Selects Item. Hold show tracks.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Eras.List.Item2</TD>
+				<TD>&nbsp;2:52</TD>
+				<TD>&nbsp;2:52</TD>
+				<TD>&nbsp;List Item #2. Push Selects Item. Hold show tracks.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Eras.List.Item3</TD>
+				<TD>&nbsp;2:53</TD>
+				<TD>&nbsp;2:53</TD>
+				<TD>&nbsp;List Item #3. Push Selects Item. Hold show tracks.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Eras.List.Item4</TD>
+				<TD>&nbsp;2:54</TD>
+				<TD>&nbsp;2:54</TD>
+				<TD>&nbsp;List Item #4. Push Selects Item. Hold show tracks.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Eras.PageInfo</TD>
+				<TD>&nbsp;2:246</TD>
+				<TD>&nbsp;2:166</TD>
+				<TD>&nbsp;Page Info. "Page X of XXX". PUSH: add to Q. HOLD: play now</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Eras.Back</TD>
+				<TD>&nbsp;2:157</TD>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Back</TD>
+			</TR>
+
+			<TR>
+				<TD COLSPAN="6" CLASS="TD_SectionTitle"><B>&nbsp;XiVA-Browser-A5-Genres</B></TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Genre.List.Item1</TD>
+				<TD>&nbsp;2:41</TD>
+				<TD>&nbsp;2:41</TD>
+				<TD>&nbsp;List Item #1. Push Selects Item. Hold show Albums.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Genre.List.Item2</TD>
+				<TD>&nbsp;2:42</TD>
+				<TD>&nbsp;2:42</TD>
+				<TD>&nbsp;List Item #2. Push Selects Item. Hold show Albums.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Genre.List.Item3</TD>
+				<TD>&nbsp;2:43</TD>
+				<TD>&nbsp;2:43</TD>
+				<TD>&nbsp;List Item #3. Push Selects Item. Hold show Albums.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Genre.List.Item4</TD>
+				<TD>&nbsp;2:44</TD>
+				<TD>&nbsp;2:44</TD>
+				<TD>&nbsp;List Item #4. Push Selects Item. Hold show Albums.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Genres.PageInfo</TD>
+				<TD>&nbsp;2:246</TD>
+				<TD>&nbsp;2:165</TD>
+				<TD>&nbsp;Page Info. "Page X of XXX". PUSH: add to Q. HOLD: play now</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Genres.Back</TD>
+				<TD>&nbsp;2:157</TD>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Back</TD>
+			</TR>
+
+			<TR>
+				<TD COLSPAN="6" CLASS="TD_SectionTitle"><B>&nbsp;XiVA-Browser-A8-Playlists</B></TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Playlists.List.Item1</TD>
+				<TD>&nbsp;2:71</TD>
+				<TD>&nbsp;2:71</TD>
+				<TD>&nbsp;List Item #1. Push Selects Item. Hold show tracks.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Playlists.List.Item2</TD>
+				<TD>&nbsp;2:72</TD>
+				<TD>&nbsp;2:72</TD>
+				<TD>&nbsp;List Item #2. Push Selects Item. Hold show tracks.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Playlists.List.Item3</TD>
+				<TD>&nbsp;2:73</TD>
+				<TD>&nbsp;2:73</TD>
+				<TD>&nbsp;List Item #3. Push Selects Item. Hold show tracks.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Playlists.List.Item4</TD>
+				<TD>&nbsp;2:74</TD>
+				<TD>&nbsp;2:74</TD>
+				<TD>&nbsp;List Item #4. Push Selects Item. Hold show tracks.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Playlists.PageInfo</TD>
+				<TD>&nbsp;2:246</TD>
+				<TD>&nbsp;2:168</TD>
+				<TD>&nbsp;Page Info. "Page X of XXX". PUSH: add to Q. HOLD: play now</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Playlists.Back</TD>
+				<TD>&nbsp;2:157</TD>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Back</TD>
+			</TR>
+
+			<TR>
+				<TD COLSPAN="6" CLASS="TD_SectionTitle"><B>&nbsp;XiVA-Browser-I0-ServerInfo</B></TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Server.ModelText</TD>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;2:31</TD>
+				<TD>&nbsp;Server Model Text</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Server.SerialText</TD>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;2:32</TD>
+				<TD>&nbsp;Server Serial Number Text</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Server.XiVAver</TD>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;2:33</TD>
+				<TD>&nbsp;Server XiVA software version</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Server.Linkver</TD>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;2:34</TD>
+				<TD>&nbsp;Server XiVALink version.</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;AMXModule.ver</TD>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;2:37</TD>
+				<TD>&nbsp;AMX Module version</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;Server.Conn</TD>
+				<TD>&nbsp;</TD>
+				<TD>&nbsp;2:38</TD>
+				<TD>&nbsp;Server Connection State Display</TD>
+			</TR>
+		</TABLE>
+	</DIV>
+
+	<BR>
+	<A HREF="#top">Top</A>
+	<HR>
+
+	<A NAME="ListTablesDataUtilization"></A><SPAN CLASS="SectionHeader"><CENTER>List Table Data</CENTER></SPAN><BR>
+
+	<DIV ALIGN="CENTER">
+		<TABLE BORDER="1" WIDTH="100%" CELLSPACING="0" CELLPADDING="0">
+			<COL WIDTH=25%>
+			<COL WIDTH=15%>
+			<COL WIDTH=*>
+			<TR CLASS=TableFieldTitle>
+				<TD>&nbsp;Table Info</TD>
+				<TD>&nbsp;Caption</TD>
+				<TD>&nbsp;Channel Port:Channel</TD>
+				<TD>&nbsp;Page Flip</TD>
+			</TR>
+
+			<TR>
+				<TD COLSPAN="6" CLASS="TD_SectionTitle"><B>&nbsp;Audio Library Browsers ---- Address-Port: 401:2</B></TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>				<TD>&nbsp;    •Artists</TD>				<TD>&nbsp;2:111</TD>				<TD>&nbsp;XiVA-Browser-A1-Artists</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>				<TD>&nbsp;    •Albums</TD>				<TD>&nbsp;2:112</TD>				<TD>&nbsp;XiVA-Browser-A2-Albums</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>				<TD>&nbsp;    •Tracks</TD>				<TD>&nbsp;2:113</TD>				<TD>&nbsp;XiVA-Browser-A3-Tracks</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>				<TD>&nbsp;    •Genres</TD>				<TD>&nbsp;2:115</TD>				<TD>&nbsp;XiVA-Browser-A5-Genres</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>				<TD>&nbsp;    •Years</TD>				<TD>&nbsp;2:117</TD>				<TD>&nbsp;XiVA-Browser-A7-Years</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>				<TD>&nbsp;    •Eras</TD>				<TD>&nbsp;2:116</TD>				<TD>&nbsp;XiVA-Browser-A6-Eras</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>				<TD>&nbsp;    •Playlists</TD>				<TD>&nbsp;2:118</TD>				<TD>&nbsp;XiVA-Browser-A8-Playlists</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>				<TD>&nbsp;    •Info</TD>				<TD>&nbsp;2:31</TD>				<TD>&nbsp;XiVA-Browser-I0-ServerInfo</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>				<TD>&nbsp;    •Play Queue</TD>				<TD>&nbsp;2:121</TD>				<TD>&nbsp;XiVA-Browser-A11-PlayQueue</TD>
+			</TR>
+			<TR CLASS=TR_Highlight>
+				<TD>&nbsp;</TD>				<TD>&nbsp;    •Now Playing</TD>				<TD>&nbsp;2:122</TD>				<TD>&nbsp;XiVA-Browser-A12-NowPlaying</TD>
+			</TR>
+		</TABLE>
+	</DIV>
+
+	<BR>
+	<A HREF="#top">Top</A>
+	<HR>
+
+	<B>End of report</B>
+
+	<!-- Report ends here -->
+
+</BODY>
+
+</HTML>
+

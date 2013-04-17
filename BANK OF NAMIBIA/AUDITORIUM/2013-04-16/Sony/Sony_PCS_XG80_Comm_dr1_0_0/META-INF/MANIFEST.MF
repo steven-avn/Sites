@@ -1,0 +1,93 @@
+Manifest-Version: 1.0.0
+PROPERTY-Has-Iris: false
+PROPERTY-Has-Phonebook: true
+Import-Package: org.osgi.service.http; specification-version=1.1,org.o
+ sgi.service.device; specification-version=1.0.1,com.amx.duet.driver; 
+ specification-version=1.0.1,com.amx.duet.core.osgi; specification-ver
+ sion=1.0.1,com.amx.duet.da; specification-version=1.0.2,com.amx.duet.
+ util.metadata; specification-version=1.0.1,com.amx.duet.util; specifi
+ cation-version=1.0.1,com.amx.duet.devicesdk; specification-version=1.
+ 15.0,com.amx.duet.devicesdk.base; specification-version=1.15.0,com.am
+ x.duet.devicesdk.component; specification-version=1.15.0,com.amx.duet
+ .devicesdk.type; specification-version=1.15.0
+Login: String,sonypcs
+PROPERTY-Has-Pan-Tilt-Speed: false
+PROPERTY-Has-Hook: true
+IP-Dialing-Capable: false
+Device-Model: PCS-XG80
+Support-Multipoint: false
+PROPERTY-Has-Hook-Cycle: true
+Bundle-Copyright: (C) Copyright AMX Corp. 2004-2010. All Rights Reserv
+ ed.
+PROPERTY-Dialer-Count: 1
+Bundle-Name: Sony_PCS_XG80_Comm_dr1_0_0
+AMX-Type: Duet
+Baud_Rate: Integer,38400
+Multipoint: Integer,1
+Device-Category: ip,serial,rs-232
+PROPERTY-Has-Auto-Answer: true
+PROPERTY-Has-Privacy-Cycle: true
+PROPERTY-Has-Pan-Tilt: false
+PROPERTY-Has-Auto-Focus: true
+PROPERTY-Has-Power-Cycle: true
+Bundle-Activator: com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Activator
+PROPERTY-Has-Menu-10Key: true
+Device-Make: Sony
+Device-Revision: 1.0.0
+PROPERTY-Has-PIP: true
+Farend-Source-Select-Available: false
+PROPERTY-Has-Volume-Mute-Cycle: true
+PROPERTY-Has-Input-Select-Cycle: true
+Router-Service: com.amx.duet.routers.snapi.ISNAPIRouter
+PROPERTY-Has-Iris-Speed: false
+PROPERTY-Has-Tilt-Ramp: true
+PROPERTY-Has-Camera-Preset-Cycle: true
+PROPERTY-Has-Pan-Ramp: true
+Bundle-Vendor: AMX Corporation
+PROPERTY-Has-PIP-Cycle: true
+Num-Speed-Dial-Indexes: 0
+PROPERTY-Has-Zoom-Ramp: true
+PROPERTY-Has-Dialer: true
+Device-Channels: 314
+PROPERTY-Has-Auto-Iris: false
+PROPERTY-Has-Audible-Ring: true
+Device-Interface: com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.ISony_PCS_XG
+ 80
+PROPERTY-Has-Power: true
+PROPERTY-Has-Menu: true
+PROPERTY-Menu-List: ASTERISK,POUND,DIAL,ACCEPT,REJECT,MENU,DISPLAY,CAN
+ CEL,DOT,RETURN,ENTER
+PROPERTY-Has-Input-Select: true
+PROPERTY-Has-Focus-Speed: false
+PROPERTY-Has-Auto-Focus-Cycle: true
+Bundle-Version: 1.0.3
+PROPERTY-Has-PIP-Position-Cycle: true
+Device-SDKClass: com.amx.duet.devicesdk.VideoConferencer
+PROPERTY-Has-Camera-Preset: true
+Device-GUID: SONYPCS-XG80 02.00.00
+Phonebook_Entries: Integer,50,1..1000
+PROPERTY-Menu-Navigate-List: UP,DOWN,LEFT,RIGHT,SELECT
+PROPERTY-Has-Auto-Iris-Cycle: false
+Password: String
+Duet-Firmware-Version: v3.50.430
+Device-SDKInterface: com.amx.duet.devicesdk.IVideoConferencer3
+PROPERTY-Has-Menu-Navigate: true
+Export-Package: com.amx.duet.impl.sony.pcs_xg80.dr1_0_0; specification
+ -version=1.0.3
+Farend-Camera-Control-Available: false
+Device-Levels: 8
+PROPERTY-Has-Auto-Answer-Cycle: true
+Phoneline-Dialing-Capable: false
+File-Dependencies: devicesdkrt.jar; specification-version=1.15.0,snapi
+ router.jar; specification-version=1.15.0
+PROPERTY-Has-Volume-Ramp: true
+PROPERTY-Has-Volume: true
+Device-Class: com.amx.duet.impl.sony.pcs_xg80.dr1_0_0.Sony_PCS_XG80
+PROPERTY-Has-Focus: false
+PROPERTY-Has-Privacy: true
+PROPERTY-Has-Iris-Ramp: false
+PROPERTY-Has-Focus-Ramp: true
+PROPERTY-Has-Audible-Ring-Cycle: true
+PROPERTY-Has-Zoom-Speed: false
+PROPERTY-Has-Zoom: false
+

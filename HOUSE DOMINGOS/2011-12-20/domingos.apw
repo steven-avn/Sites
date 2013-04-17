@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Workspace [
+
+<!-- Common Elements -->
+<!ELEMENT Identifier (#PCDATA)>
+<!ELEMENT Comments (#PCDATA)>
+<!ELEMENT CreationDate (#PCDATA)>
+
+<!-- Workspace Elements-->
+<!ELEMENT Workspace ( Identifier,
+               CreateVersion,
+               PJS_File?,
+               PJS_ConvertDate?,
+               PJS_CreateDate?,
+               Comments?,
+               Project*)>
+
+<!ATTLIST Workspace 
+      CurrentVersion CDATA   #REQUIRED> 
+
+<!ELEMENT CreateVersion     (#PCDATA)>
+
+
+<!-- Conversion data only: only included for files converted from the old .pjs database -->
+<!ELEMENT PJS_File (#PCDATA)>
+<!ELEMENT PJS_ConvertDate (#PCDATA)>
+<!ELEMENT PJS_CreateDate (#PCDATA)>
+
+<!ELEMENT Project ( Identifier,
+               Designer?,
+               DealerID?,
+               SalesOrder?,
+               PurchaseOrder?,
+               Comments?,
+               System*)>
+
+<!ELEMENT Designer (#PCDATA)>
+<!ELEMENT DealerID (#PCDATA)>
+<!ELEMENT SalesOrder (#PCDATA)>
+<!ELEMENT PurchaseOrder (#PCDATA)>
+
+
+<!ELEMENT System  (  Identifier,
+                 SysID,
+                 TransSerial?,
+                 TransModem?,
+                 TransTCPIP?,
+                 VirtualNetLinxMasterFlag?,
+                 VNMRestoreIPSettings?,
+                 VNMSystemID?,
+                 VNMIPAddress?,
+                 VNMMaskAddress?,
+                 IsAuthenticationEnabled?,
+                 UserName?,
+                 Password?,
+                 Comments?,
+                 File*)>
+
+<!ATTLIST System
+      IsActive   (true | false)   "false"
+      Platform   (Axcess | Netlinx)   "Axcess"
+      Transport   (Serial | Modem | TCPIP) "Serial">
+
+<!ELEMENT SysID (#PCDATA)>
+<!ELEMENT TransSerial (#PCDATA)>
+<!ELEMENT TransModem (#PCDATA)>
+<!ELEMENT TransTCPIP (#PCDATA)>
+<!ELEMENT VirtualNetLinxMasterFlag (#PCDATA)>
+<!ELEMENT VNMRestoreIPSettings (#PCDATA)>
+<!ELEMENT VNMSystemID (#PCDATA)>
+<!ELEMENT VNMIPAddress (#PCDATA)>
+<!ELEMENT VNMMaskAddress (#PCDATA)>
+<!ELEMENT IsAuthenticationEnabled (#PCDATA)>
+<!ELEMENT UserName (#PCDATA)>
+<!ELEMENT Password (#PCDATA)>
+
+
+<!ELEMENT File ( Identifier,
+               FilePathName,
+               Comments?,
+               DeviceMap*,
+               IRDB*)>
+
+<!ATTLIST File 
+       Type (Source | MasterSrc | Include | Module | AXB | IR | TPD | TP4 | KPD | TKO | AMX_IR_DB | IRN_DB | Other | DUET | TOK | TKN | KPB ) "Other"
+       CompileType (Axcess | Netlinx | None) "None"> 
+
+<!ELEMENT FilePathName	(#PCDATA)>
+                            
+<!ELEMENT DeviceMap (DevName)>
+       <!ATTLIST DeviceMap DevAddr CDATA #REQUIRED>
+
+       <!ELEMENT DevName (#PCDATA)>
+
+<!ELEMENT IRDB    (Property,
+                 DOSName,
+                 UserDBPathName,
+                 Notes)>
+       <!ATTLIST IRDB DBKey CDATA #REQUIRED>
+
+       <!ELEMENT Property (#PCDATA)>
+       <!ELEMENT DOSName (#PCDATA)>
+       <!ELEMENT UserDBPathName (#PCDATA)>
+       <!ELEMENT Notes (#PCDATA)>
+]>
+
+<Workspace CurrentVersion="3.3"><Identifier>HOUSE DOMINGOS</Identifier>
+<CreateVersion>3.2</CreateVersion>
+<PJS_File></PJS_File>
+<PJS_ConvertDate></PJS_ConvertDate>
+<PJS_CreateDate></PJS_CreateDate>
+<Comments></Comments>
+<Project><Identifier>HOUSE DOMINGOS</Identifier>
+<Designer></Designer>
+<DealerID></DealerID>
+<SalesOrder></SalesOrder>
+<PurchaseOrder></PurchaseOrder>
+<Comments></Comments>
+<System IsActive="true" Platform="Netlinx" Transport="TCPIP"><Identifier>HOUSE DOMINGOS</Identifier>
+<SysID>0</SysID>
+<TransSerial>COM7,38400,8,None,1,None</TransSerial>
+<TransModem>COM1,38400,8,None,1,None</TransModem>
+<TransTCPIP>192.168.10.101:1319:1:House Domingos</TransTCPIP>
+<VirtualNetLinxMasterFlag>0</VirtualNetLinxMasterFlag>
+<VNMRestoreIPSettings>192.168.10.101:1319:1:House Domingos</VNMRestoreIPSettings>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<IsAuthenticationEnabled>0</IsAuthenticationEnabled>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="None" Type="Other"><Identifier>Media Control Server and Mirage Getting Started</Identifier>
+<FilePathName>..\..\AMX\Product Documentation\Autonomic Control System\Media Control Server and Mirage Getting Started.pdf</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="TKO"><Identifier>XIVA Link v2 Driver</Identifier>
+<FilePathName>AMX Module v2 Driver v1.20 iMerge(S3000)\XIVA Link v2 Driver.tko</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Other"><Identifier>AMX MatrixAudio MiSeries Interface</Identifier>
+<FilePathName>AMX_Matrix_MiSeries_v1_1_6_dr1_0_1\AMX MatrixAudio MiSeries Interface.doc</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="DUET"><Identifier>AMX_Matrix_MiSeries_Comm_dr1_0_1</Identifier>
+<FilePathName>AMX_Matrix_MiSeries_v1_1_6_dr1_0_1\AMX_Matrix_MiSeries_Comm_dr1_0_1.jar</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Include"><Identifier>AMX_MatrixAudio_MiSeries_MAIN</Identifier>
+<FilePathName>AMX_MatrixAudio_MiSeries_MAIN.axi</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Other"><Identifier>readme</Identifier>
+<FilePathName>Automomic_AMX_2.4\readme.txt</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Include"><Identifier>BOSE</Identifier>
+<FilePathName>BOSE.axi</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Include"><Identifier>Camera</Identifier>
+<FilePathName>Camera.axi</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Other"><Identifier>AMX.Wireless.Site.Survey.Guide</Identifier>
+<FilePathName>documents\AMX.Wireless.Site.Survey.Guide.pdf</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Other"><Identifier>HDMI-UTPRO-0808.InstructionManual</Identifier>
+<FilePathName>documents\HDMI-UTPRO-0808.InstructionManual.pdf</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Other"><Identifier>MIO-R4.OperationReferenceGuide</Identifier>
+<FilePathName>documents\MIO-R4.OperationReferenceGuide.pdf</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Other"><Identifier>NXA-WAP250G.InstallationGuide</Identifier>
+<FilePathName>documents\NXA-WAP250G.InstallationGuide.pdf</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Other"><Identifier>NXA-WAP250G.OperationReferenceGuide</Identifier>
+<FilePathName>documents\NXA-WAP250G.OperationReferenceGuide.pdf</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Other"><Identifier>NXR-ZGW-PRO.InstallationGuide</Identifier>
+<FilePathName>documents\NXR-ZGW-PRO.InstallationGuide.pdf</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Other"><Identifier>NXR-ZGW-ZRP-PRO.OperationReferenceGuide</Identifier>
+<FilePathName>documents\NXR-ZGW-ZRP-PRO.OperationReferenceGuide.pdf</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Other"><Identifier>System Layout</Identifier>
+<FilePathName>documents\System Layout.odg</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Include"><Identifier>DSTV</Identifier>
+<FilePathName>DSTV.axi</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Include"><Identifier>DVD</Identifier>
+<FilePathName>DVD.axi</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Include"><Identifier>DVD_2</Identifier>
+<FilePathName>DVD_2.axi</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="TKO"><Identifier>GBSCommMod</Identifier>
+<FilePathName>GBSCommMod.tko</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Include"><Identifier>Green Box Systems Wired Initialisation</Identifier>
+<FilePathName>Green Box Systems Wired Initialisation.axi</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="IR"><Identifier>dstv0000</Identifier>
+<FilePathName>IR_Files\dstv0000.irl</FilePathName>
+<Comments></Comments>
+<DeviceMap DevAddr="dvTPA"><DevName>dvTPA</DevName>
+</DeviceMap>
+</File>
+<File CompileType="None" Type="IR"><Identifier>HD PVR</Identifier>
+<FilePathName>IR_Files\HD PVR.irl</FilePathName>
+<Comments></Comments>
+<DeviceMap DevAddr="dvHDPVR1"><DevName>dvHDPVR1</DevName>
+</DeviceMap>
+</File>
+<File CompileType="None" Type="IR"><Identifier>Panasonic TV</Identifier>
+<FilePathName>IR_Files\Panasonic TV.irl</FilePathName>
+<Comments></Comments>
+<DeviceMap DevAddr="dvHDMI_Entert"><DevName>dvHDMI_Entert</DevName>
+</DeviceMap>
+</File>
+<File CompileType="None" Type="IR"><Identifier>Samsung TV &amp; DVR</Identifier>
+<FilePathName>IR_Files\Samsung TV &amp; DVR.irl</FilePathName>
+<Comments></Comments>
+<DeviceMap DevAddr="dvSAM_DVR"><DevName>dvSAM_DVR</DevName>
+</DeviceMap>
+<DeviceMap DevAddr="dvSAM_TV"><DevName>dvSAM_TV</DevName>
+</DeviceMap>
+</File>
+<File CompileType="None" Type="IR"><Identifier>Sony DVP-NS728HP DVD</Identifier>
+<FilePathName>IR_Files\Sony DVP-NS728HP DVD.irl</FilePathName>
+<Comments></Comments>
+<DeviceMap DevAddr="dvSONY_DVD"><DevName>dvSONY_DVD</DevName>
+</DeviceMap>
+</File>
+<File CompileType="None" Type="IR"><Identifier>Sony TV</Identifier>
+<FilePathName>IR_Files\Sony TV.irl</FilePathName>
+<Comments></Comments>
+<DeviceMap DevAddr="dvHDMI_Bed"><DevName>dvHDMI_Bed</DevName>
+</DeviceMap>
+<DeviceMap DevAddr="dvHDMI_Down1"><DevName>dvHDMI_Down1</DevName>
+</DeviceMap>
+</File>
+<File CompileType="None" Type="IR"><Identifier>Sony WDP-S370 BluRay</Identifier>
+<FilePathName>IR_Files\Sony WDP-S370 BluRay.irl</FilePathName>
+<Comments></Comments>
+<DeviceMap DevAddr="dvSONY_br"><DevName>dvSONY_br</DevName>
+</DeviceMap>
+</File>
+<File CompileType="None" Type="IR"><Identifier>WesternDigital Live</Identifier>
+<FilePathName>IR_Files\WesternDigital Live.irv</FilePathName>
+<Comments></Comments>
+<DeviceMap DevAddr="dvWD_Live_BR"><DevName>dvWD_Live_BR</DevName>
+</DeviceMap>
+<DeviceMap DevAddr="dvWD_Live_ER"><DevName>dvWD_Live_ER</DevName>
+</DeviceMap>
+<DeviceMap DevAddr="dvWD_Live_LR"><DevName>dvWD_Live_LR</DevName>
+</DeviceMap>
+</File>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>main</Identifier>
+<FilePathName>MAIN.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="TP4"><Identifier>House Domingos MVP-5150 Bi-Lingual</Identifier>
+<FilePathName>TP files\House Domingos MVP-5150 Bi-Lingual.TP4</FilePathName>
+<Comments></Comments>
+<DeviceMap DevAddr="dvTP"><DevName>dvTP</DevName>
+</DeviceMap>
+</File>
+<File CompileType="None" Type="TP4"><Identifier>R4_1</Identifier>
+<FilePathName>TP files\R4_1.TP4</FilePathName>
+<Comments></Comments>
+<DeviceMap DevAddr="dvR4_1"><DevName>dvR4_1</DevName>
+</DeviceMap>
+</File>
+<File CompileType="None" Type="TP4"><Identifier>R4_RM1</Identifier>
+<FilePathName>TP files\R4_RM1.TP4</FilePathName>
+<Comments>Daughter&apos;s Room</Comments>
+<DeviceMap DevAddr="dvR4_RM1"><DevName>dvR4_RM1</DevName>
+</DeviceMap>
+</File>
+<File CompileType="None" Type="TP4"><Identifier>R4_RM2</Identifier>
+<FilePathName>TP files\R4_RM2.TP4</FilePathName>
+<Comments>Son&apos;s Room</Comments>
+<DeviceMap DevAddr="dvR4_RM2"><DevName>dvR4_RM2</DevName>
+</DeviceMap>
+</File>
+<File CompileType="None" Type="TP4"><Identifier>R4_RM3</Identifier>
+<FilePathName>TP files\R4_RM3.TP4</FilePathName>
+<Comments>Downstairs 1</Comments>
+<DeviceMap DevAddr="dvR4_RM3"><DevName>dvR4_RM3</DevName>
+</DeviceMap>
+</File>
+<File CompileType="None" Type="TP4"><Identifier>R4_RM4</Identifier>
+<FilePathName>TP files\R4_RM4.TP4</FilePathName>
+<Comments>Downstairs 2</Comments>
+<DeviceMap DevAddr="dvR4_RM4"><DevName>dvR4_RM4</DevName>
+</DeviceMap>
+</File>
+<File CompileType="None" Type="Include"><Identifier>TPA</Identifier>
+<FilePathName>TPA.axi</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="None" Type="Include"><Identifier>WD TV Live</Identifier>
+<FilePathName>WD TV Live.axi</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+</Project>
+</Workspace>

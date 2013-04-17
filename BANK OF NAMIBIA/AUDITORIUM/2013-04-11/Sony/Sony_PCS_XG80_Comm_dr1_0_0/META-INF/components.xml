@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dev:components xmlns:dev="http://www.amx.com/duet/devicesdk" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.amx.com/duet/devicesdk/components.xsd">
+  <dev:component>
+    <dev:component-name>IVideoConferencerComponent</dev:component-name>
+    <dev:component-interface>com.amx.duet.devicesdk.component.IVideoConferencerComponent</dev:component-interface>
+  </dev:component>
+  <dev:component>
+    <dev:component-name>ISourceSelectComponent3</dev:component-name>
+    <dev:component-interface>com.amx.duet.devicesdk.component.ISourceSelectComponent3</dev:component-interface>
+  </dev:component>
+  <dev:component>
+    <dev:component-name>IVolumeComponent2</dev:component-name>
+    <dev:component-interface>com.amx.duet.devicesdk.component.IVolumeComponent2</dev:component-interface>
+  </dev:component>
+  <dev:component>
+    <dev:component-name>IDialerComponent</dev:component-name>
+    <dev:component-interface>com.amx.duet.devicesdk.component.IDialerComponent</dev:component-interface>
+  </dev:component>
+  <dev:component>
+    <dev:component-name>IPhonebookComponent</dev:component-name>
+    <dev:component-interface>com.amx.duet.devicesdk.component.IPhonebookComponent</dev:component-interface>
+  </dev:component>
+  <dev:component>
+    <dev:component-name>IPowerComponent</dev:component-name>
+    <dev:component-interface>com.amx.duet.devicesdk.component.IPowerComponent</dev:component-interface>
+  </dev:component>
+  <dev:component>
+    <dev:component-name>ICameraComponent2</dev:component-name>
+    <dev:component-interface>com.amx.duet.devicesdk.component.ICameraComponent2</dev:component-interface>
+  </dev:component>
+  <dev:component>
+    <dev:component-name>IMenuComponent</dev:component-name>
+    <dev:component-interface>com.amx.duet.devicesdk.component.IMenuComponent</dev:component-interface>
+  </dev:component>
+  <dev:component-mapping>
+    <dev:component-name>IVideoConferencerComponent</dev:component-name>
+    <dev:icsp-port index="1">1</dev:icsp-port>
+  </dev:component-mapping>
+  <dev:component-mapping>
+    <dev:component-name>ISourceSelectComponent3</dev:component-name>
+    <dev:icsp-port index="1">1</dev:icsp-port>
+    <dev:icsp-port index="2">2</dev:icsp-port>
+  </dev:component-mapping>
+  <dev:component-mapping>
+    <dev:component-name>IVolumeComponent2</dev:component-name>
+    <dev:icsp-port index="1">1</dev:icsp-port>
+  </dev:component-mapping>
+  <dev:component-mapping>
+    <dev:component-name>IDialerComponent</dev:component-name>
+    <dev:icsp-port index="1">1</dev:icsp-port>
+    <dev:icsp-port index="2">2</dev:icsp-port>
+    <dev:icsp-port index="3">3</dev:icsp-port>
+    <dev:icsp-port index="4">4</dev:icsp-port>
+    <dev:icsp-port index="5">5</dev:icsp-port>
+  </dev:component-mapping>
+  <dev:component-mapping>
+    <dev:component-name>IPhonebookComponent</dev:component-name>
+    <dev:icsp-port index="1">1</dev:icsp-port>
+  </dev:component-mapping>
+  <dev:component-mapping>
+    <dev:component-name>IPowerComponent</dev:component-name>
+    <dev:icsp-port index="1">1</dev:icsp-port>
+  </dev:component-mapping>
+  <dev:component-mapping>
+    <dev:component-name>ICameraComponent2</dev:component-name>
+    <dev:icsp-port index="1">1</dev:icsp-port>
+    <dev:icsp-port index="2">2</dev:icsp-port>
+  </dev:component-mapping>
+  <dev:component-mapping>
+    <dev:component-name>IMenuComponent</dev:component-name>
+    <dev:icsp-port index="1">1</dev:icsp-port>
+  </dev:component-mapping>
+</dev:components>

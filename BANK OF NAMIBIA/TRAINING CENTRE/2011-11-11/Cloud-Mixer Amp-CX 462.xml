@@ -1,0 +1,119 @@
+<DCS:LibraryDataSet xmlns:DCS="AMX">
+  <dtManufacturer xmlns="AMX">
+    <ID>1</ID>
+    <Name>Cloud</Name>
+    <dtDeviceType>
+      <ID>1</ID>
+      <fkManufacturerID>1</fkManufacturerID>
+      <Name>Mixer Amp</Name>
+      <dtDeviceModel>
+        <ID>1</ID>
+        <fkDeviceTypeID>1</fkDeviceTypeID>
+        <Name>CX 462</Name>
+        <CreatedByAMX>false</CreatedByAMX>
+        <LegacyID />
+        <dtRS232>
+          <ID>1</ID>
+          <fkDeviceModelID>1</fkDeviceModelID>
+          <RS232BaudRate>9600</RS232BaudRate>
+          <RS232Parity>None</RS232Parity>
+          <RS232DataBits>8</RS232DataBits>
+          <RS232StopBits>1</RS232StopBits>
+          <RS232FlowControl>None</RS232FlowControl>
+          <RS232DataFormat>HEX</RS232DataFormat>
+          <dtRS232CommandData>
+            <ID>1</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>Music Channel Mute</Name>
+            <Data>3C 4D 55 2C 4D 2F 3E</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>2</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>Mic Channel Mute</Name>
+            <Data>3C 4D 49 2C 4D 2F 3E</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>3</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>Music Channel Vol Up</Name>
+            <Data>3C 4D 55 2C 4C 55 35 2F 3E</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>4</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>Music Channel Vol Down</Name>
+            <Data>3C 4D 55 2C 4C 44 35 2F 3E</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>5</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>Music Source 1</Name>
+            <Data>3C 4D 55 2C 53 41 31 2F 3E</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>6</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>Music Source 2</Name>
+            <Data>3C 4D 55 2C 53 41 32 2F 3E</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>7</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>Music Channel UnMute</Name>
+            <Data>3C 4D 55 2C 4F 2F 3E</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>8</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>Music Source 3</Name>
+            <Data>3C 4D 55 2C 53 41 33 2F 3E</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>9</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>Music Source 4</Name>
+            <Data>3C 4D 55 2C 53 41 34 2F 3E</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>10</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>Music Source 5</Name>
+            <Data>3C 4D 55 2C 53 41 35 2F 3E</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>11</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>Music Source 6</Name>
+            <Data>3C 4D 55 2C 53 41 36 2F 3E</Data>
+          </dtRS232CommandData>
+          <dtRS232CommandData>
+            <ID>12</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>Input HDMI</Name>
+            <Data />
+          </dtRS232CommandData>
+          <dtRS232StatusData>
+            <ID>1</ID>
+            <fkRS232ID>1</fkRS232ID>
+            <Name>Input Status HDMI</Name>
+            <Data />
+          </dtRS232StatusData>
+        </dtRS232>
+        <dtIR>
+          <ID>1</ID>
+          <fkDeviceModelID>1</fkDeviceModelID>
+          <IRDataFormat>HEX</IRDataFormat>
+          <IRFrequency>NA</IRFrequency>
+          <IRPulsesBit>NA</IRPulsesBit>
+          <IRCarrier>NA</IRCarrier>
+        </dtIR>
+        <dtIP>
+          <ID>1</ID>
+          <fkDeviceModelID>1</fkDeviceModelID>
+          <IPDataFormat>HEX</IPDataFormat>
+        </dtIP>
+      </dtDeviceModel>
+    </dtDeviceType>
+  </dtManufacturer>
+</DCS:LibraryDataSet>
